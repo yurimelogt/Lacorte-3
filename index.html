@@ -17,16 +17,20 @@
 
   <!-- Icons & Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="icon" href="https://s01.jetimgs.com/tnkWTx8vLclyphtNjMU-Qu0KXvgATp8FXoIKoUZHuvy3bF5G9-XVDKqblSlykx_0ls6tyfHph6U1msRIkCuxqBDAtWjS-XdTz39wb0LL/downloadpng.webp" type="image/png">
+  
+  <!-- Favicon Oficial Terras Alphaville -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/alphaville-favicon.png">
+  <link rel="apple-touch-icon" href="assets/alphaville-favicon.png">
 
   <!-- Stylesheet com Cache-Buster & Estilos Críticos Diretos no HTML -->
-  <link rel="stylesheet" href="styles.css?v=20261022_final">
+  <link rel="stylesheet" href="styles.css?v=20261023_transparent_video_v5">
   <style>
     /* ==========================================================================
        LA CÔRTE IMÓVEIS - AJUSTES CRÍTICOS DIRETAMENTE NO INDEX.HTML
-       1. Zero Imagem no Vídeo Inicial: Apenas o Vídeo em Alta Definição & Fundo Branco
-       2. Smartphone & Console: Zero Cortes, Zero Rolagem Lateral, 100% Responsivo
-       3. Desktop: Zero Espaço Branco Vazio abaixo das Miniaturas
+       1. Vídeo Inicial 100% Visível com Card Altamente Translúcido
+       2. Logos do Alphaville em Destaque & Proporções Ampliadas
+       3. Smartphone & Console: Zero Cortes, Zero Rolagem Lateral, 100% Responsivo
        ========================================================================== */
     html, body {
       overflow-x: hidden !important;
@@ -39,22 +43,97 @@
       box-sizing: border-box;
     }
 
-    /* Hero Section: Puro Vídeo sem imagem de fundo nem sobreposição escura */
+    /* Hero Section: Vídeo 100% Puro e Totalmente Visível sem películas escuras */
     .hero-section {
-      background-color: #FFFFFF !important;
+      background: transparent !important;
       position: relative !important;
       overflow: hidden !important;
     }
 
     .hero-bg-media {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
       opacity: 1 !important;
       filter: none !important;
-      object-fit: cover !important;
       z-index: 0 !important;
     }
 
     .hero-bg-overlay {
       display: none !important;
+    }
+
+    /* Card com Altíssima Transparência (o vídeo passa com total nitidez) */
+    .hero-card-box {
+      background: rgba(255, 255, 255, 0.14) !important;
+      -webkit-backdrop-filter: blur(2.5px) !important;
+      backdrop-filter: blur(2.5px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.45) !important;
+      border-radius: 24px !important;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18) !important;
+    }
+
+    .hero-title {
+      color: #041226 !important;
+      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 16px rgba(255, 255, 255, 0.9), 0 0 35px rgba(255, 255, 255, 0.7) !important;
+    }
+
+    .hero-desc {
+      color: #071930 !important;
+      font-weight: 600 !important;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85) !important;
+    }
+
+    /* Logos do Alphaville Ampliadas e Nítidas */
+    .hero-official-badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 1.1rem !important;
+      background: rgba(255, 255, 255, 0.94) !important;
+      border: 1.5px solid rgba(22, 101, 52, 0.28) !important;
+      border-radius: 50px !important;
+      padding: 0.55rem 1.4rem 0.55rem 1rem !important;
+      margin-bottom: 1.5rem !important;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1) !important;
+      backdrop-filter: blur(6px) !important;
+    }
+
+    .hero-alphaville-brand-img {
+      height: 52px !important;
+      width: auto !important;
+      object-fit: contain !important;
+    }
+
+    .hero-official-tag {
+      font-size: 0.85rem !important;
+      font-weight: 800 !important;
+      color: #15803d !important;
+      letter-spacing: 0.04em !important;
+      text-transform: uppercase !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      border-left: 2px solid rgba(21, 128, 61, 0.25) !important;
+      padding-left: 0.9rem !important;
+    }
+
+    .header-alphaville-logo {
+      height: 42px !important;
+    }
+
+    .properties-alphaville-logo {
+      height: 56px !important;
+    }
+
+    .club-alphaville-square-logo {
+      height: 140px !important;
+    }
+
+    .footer-alphaville-logo {
+      height: 64px !important;
     }
 
     /* Desktop: Colunas Perfeitamente Alinhadas, Sem Espaço em Branco */
@@ -103,19 +182,77 @@
       }
 
       .hero-section {
-        padding: 6.5rem 0 3rem !important;
-        background-color: #FFFFFF !important;
+        padding: 5.5rem 0 2.5rem !important;
+        background: transparent !important;
       }
 
       .hero-card-box {
         padding: 1.5rem 1.15rem !important;
-        background: rgba(255, 255, 255, 0.95) !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+        background: rgba(255, 255, 255, 0.14) !important;
+        -webkit-backdrop-filter: blur(2.5px) !important;
+        backdrop-filter: blur(2.5px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.45) !important;
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18) !important;
+      }
+
+      .hero-highlight-item {
+        background: rgba(255, 255, 255, 0.4) !important;
+        border: 1px solid rgba(255, 255, 255, 0.6) !important;
+        border-radius: 8px !important;
+        padding: 0.5rem 0.6rem !important;
+        backdrop-filter: blur(3px) !important;
+      }
+
+      .header-brand-separator {
+        margin: 0 0.35rem !important;
+        font-size: 1.1rem !important;
+      }
+
+      .header-alphaville-logo {
+        height: 32px !important;
+      }
+
+      .hero-official-badge {
+        padding: 0.4rem 1rem 0.4rem 0.75rem !important;
+        gap: 0.65rem !important;
+        max-width: 100% !important;
+        margin-bottom: 1.15rem !important;
+      }
+
+      .hero-alphaville-brand-img {
+        height: 40px !important;
+      }
+
+      .hero-official-tag {
+        font-size: 0.72rem !important;
+        padding-left: 0.65rem !important;
+      }
+
+      .properties-alphaville-logo {
+        height: 44px !important;
+      }
+
+      .club-alphaville-square-logo {
+        height: 100px !important;
+      }
+
+      .footer-alphaville-logo {
+        height: 52px !important;
       }
 
       .hero-title {
         font-size: 1.65rem !important;
         line-height: 1.25 !important;
+        color: #041226 !important;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 14px rgba(255, 255, 255, 0.9) !important;
+      }
+
+      .hero-desc {
+        font-size: 0.925rem !important;
+        color: #071930 !important;
+        font-weight: 600 !important;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95) !important;
+        margin-bottom: 1.25rem !important;
       }
 
       .hero-cta-group {
@@ -391,11 +528,12 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-container">
       <div class="logo-wrapper">
-        <a href="#hero" aria-label="La Côrte Imóveis - Início">
+        <a href="#hero" aria-label="La Côrte Imóveis - Início" class="header-brand-link">
           <img src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpSbjr2aUWTHHmaFp21BN6sPgPVCWJJ9Vhv7cY-d15yTNEqIXeX1lw/logopng.webp" alt="La Côrte Imóveis" class="logo-img">
         </a>
-        <div class="logo-tagline">
-          <span>CRECI RJ-008889/O</span> • <strong>Terras Alphaville</strong>
+        <span class="header-brand-separator" aria-hidden="true">|</span>
+        <div class="header-alphaville-wrap">
+          <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio" class="header-alphaville-logo">
         </div>
       </div>
 
@@ -438,6 +576,11 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-card-box">
+            <div class="hero-official-badge">
+              <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio" class="hero-alphaville-brand-img">
+              <span class="hero-official-tag"><i class="fas fa-shield-alt"></i> Condomínio Fechado Oficial</span>
+            </div>
+
             <div class="hero-badge-group">
               <span class="badge"><i class="fas fa-gem"></i> Alto Padrão Exclusivo</span>
               <span class="badge badge-emerald"><i class="fas fa-shield-alt"></i> Segurança Armada 24h</span>
@@ -494,6 +637,9 @@
     <section class="properties-section" id="imoveis">
       <div class="container">
         <div class="section-header">
+          <div class="properties-brand-pill">
+            <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio" class="properties-alphaville-logo">
+          </div>
           <span class="badge"><i class="fas fa-key"></i> Oportunidades Selecionadas La Côrte</span>
           <h2>Casas Prontas de Alto Padrão no <span class="gradient-text">Terras Alphaville</span></h2>
           <p class="subtitle">Três residências exclusivas com arquitetura contemporânea, lazer privativo impecável e alto potencial de valorização.</p>
@@ -596,103 +742,8 @@
           </article>
 
 
-          <!-- ================= PROPERTY 2: LCF090224 ================= -->
-          <article class="property-card reverse" id="card-LCF090224">
-            <div class="property-visuals">
-              <div class="property-badge-floating">
-                <span class="badge-code">CÓDIGO: LCF090224</span>
-                <span class="badge-status">Altíssimo Padrão</span>
-              </div>
-              <div class="main-image-container" onclick="openPropertyGallery('LCF090224')">
-                <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp" 
-                     alt="Mansão Terras Alphaville Cabo Frio LCF090224" class="main-property-img">
-                <button class="view-gallery-btn" aria-label="Abrir galeria de fotos">
-                  <i class="fas fa-images"></i>
-                  <span>Ver 15 Fotos</span>
-                </button>
-              </div>
-              <div class="thumbnail-strip">
-                <div class="thumb-item active" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp" alt="Fachada Dupla">
-                </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBUzx-PUY6COYUhoZubpyvvI7ozGniGgpdkB8g1bc9ivnoIxo1ltq-ygZ_uLPFLkshgiMMUYZ5gVZPv_jkm3ptXxjCz1XlkkpzU9wYoA-0e7ONgdXxjdWkARuoOgTJCgOCQjlox9VY2A7tpzn-LNseomZGb-8MF-c/img1804jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBUzx-PUY6COYUhoZubpyvvI7ozGniGgpdkB8g1bc9ivnoIxo1ltq-ygZ_uLPFLkshgiMMUYZ5gVZPv_jkm3ptXxjCz1XlkkpzU9wYoA-0e7ONgdXxjdWkARuoOgTJCgOCQjlox9VY2A7tpzn-LNseomZGb-8MF-c/img1804jpg.webp" alt="Fachada Noturna">
-                </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvnv-uHXc8sTdxmAhUY6xAOB17XGvS4ERYRPJ3dabSAY1QMlt1p9qy-zHHeLbWFztzcTRM5JYhjbdPf_IGaxyUBhQkGn4Q-xbA9bFzT1P7xq-rseAYQWc-IQAAkS288i_6vcQE5RS-_b9VpIhnni2CsC2gk_D0XU/8fb67236-a858-448d-8fc3-057a8a977e1bjpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvnv-uHXc8sTdxmAhUY6xAOB17XGvS4ERYRPJ3dabSAY1QMlt1p9qy-zHHeLbWFztzcTRM5JYhjbdPf_IGaxyUBhQkGn4Q-xbA9bFzT1P7xq-rseAYQWc-IQAAkS288i_6vcQE5RS-_b9VpIhnni2CsC2gk_D0XU/8fb67236-a858-448d-8fc3-057a8a977e1bjpg.webp" alt="Living">
-                </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvn8vLLLqpw1ACZtrM0vXAquw7lm_zVJwT7eT0VrCTWBAk9URfiwAyxerc4m0QcoRPA2NF5qpz52F4AzXyoW1qK9WQEY-9b4W_DTVfKx-Ges8mbEMh-SEeBpFWjK-EmGL6Bb3RI77PQ1RSH5BRcH2IIGOGNRI1iKd/img1767jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvn8vLLLqpw1ACZtrM0vXAquw7lm_zVJwT7eT0VrCTWBAk9URfiwAyxerc4m0QcoRPA2NF5qpz52F4AzXyoW1qK9WQEY-9b4W_DTVfKx-Ges8mbEMh-SEeBpFWjK-EmGL6Bb3RI77PQ1RSH5BRcH2IIGOGNRI1iKd/img1767jpg.webp" alt="Piscina">
-                </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19Nr5TBU4U5XQ28HPJdbcEtXZ3rzhaje2bu0qn-sStszPie_Iea-X1ss98PG3awkIiUw4hhYfSXIGDd05UzxMotVO0xsJkNclFuMZTS8skK7xiTlx3GRJZy7MPN1rj9iD07PUH2NRG5fd1YhdFRxFQXzjPT0XyYKuwWiSQ/img1740jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19Nr5TBU4U5XQ28HPJdbcEtXZ3rzhaje2bu0qn-sStszPie_Iea-X1ss98PG3awkIiUw4hhYfSXIGDd05UzxMotVO0xsJkNclFuMZTS8skK7xiTlx3GRJZy7MPN1rj9iD07PUH2NRG5fd1YhdFRxFQXzjPT0XyYKuwWiSQ/img1740jpg.webp" alt="Cozinha Gourmet">
-                </div>
-              </div>
-            </div>
-
-            <div class="property-details">
-              <div>
-                <span class="property-condo-name"><i class="fas fa-map-marker-alt"></i> Terras Alphaville Cabo Frio</span>
-                <h3 class="property-title">Magnífica Mansão Contemporânea de 350 m² com 4 Suítes</h3>
-                <p class="property-pitch">
-                  Uma obra-prima arquitetônica com pé-direito duplo espetacular. 4 amplas suítes plenas, lazer privativo com piscina, prainha e deck molhado, cozinha gourmet em ilha e acabamentos de altíssimo padrão.
-                </p>
-
-                <div class="specs-grid">
-                  <div class="spec-item">
-                    <span class="spec-label"><i class="fas fa-ruler-combined"></i> Área Útil</span>
-                    <span class="spec-val">350 m²</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label"><i class="fas fa-vector-square"></i> Terreno</span>
-                    <span class="spec-val">360 m²</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label"><i class="fas fa-bed"></i> Suítes</span>
-                    <span class="spec-val">4 amplas suítes</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label"><i class="fas fa-bath"></i> Banheiros</span>
-                    <span class="spec-val">6 banheiros</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label"><i class="fas fa-car"></i> Vagas</span>
-                    <span class="spec-val">4 vagas</span>
-                  </div>
-                  <div class="spec-item">
-                    <span class="spec-label"><i class="fas fa-check-circle"></i> Financiamento</span>
-                    <span class="spec-val" style="color: var(--emerald);">Aprovado (RGI)</span>
-                  </div>
-                </div>
-
-                <div class="features-pills">
-                  <span class="feature-pill"><i class="fas fa-expand-arrows-alt"></i> Pé-Direito Duplo</span>
-                  <span class="feature-pill"><i class="fas fa-bed"></i> 4 Suítes Plenas</span>
-                  <span class="feature-pill"><i class="fas fa-swimming-pool"></i> Piscina com Prainha</span>
-                  <span class="feature-pill"><i class="fas fa-utensils"></i> Cozinha Gourmet em Ilha</span>
-                  <span class="feature-pill"><i class="fas fa-box"></i> Despensa Completa</span>
-                  <span class="feature-pill"><i class="fas fa-fingerprint"></i> Fechadura Digital</span>
-                </div>
-              </div>
-
-              <div class="property-action-footer">
-                <div class="price-box">
-                  <span class="price-label">Valor de Venda</span>
-                  <span class="price-value">R$ 2.700.000</span>
-                  <span class="costs-meta">Condomínio: R$ 700/mês | IPTU: R$ 300/ano</span>
-                </div>
-                <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Terras%20Alphaville%20(C%C3%B3d:%20LCF090224)%20de%20R$%202.700.000.%20Gostaria%20de%20agendar%20uma%20visita%20e%20receber%20mais%20informa%C3%A7%C3%B5es." 
-                   class="btn-whatsapp-property" target="_blank" rel="noopener noreferrer">
-                  <i class="fab fa-whatsapp"></i>
-                  <span>Agendar Visita (Cód: LCF090224)</span>
-                </a>
-              </div>
-            </div>
-          </article>
-
-
-          <!-- ================= PROPERTY 3: LCF101026 ================= -->
-          <article class="property-card" id="card-LCF101026">
+          <!-- ================= PROPERTY 2: LCF101026 ================= -->
+          <article class="property-card reverse" id="card-LCF101026">
             <div class="property-visuals">
               <div class="property-badge-floating">
                 <span class="badge-code">CÓDIGO: LCF101026</span>
@@ -785,6 +836,101 @@
             </div>
           </article>
 
+
+          <!-- ================= PROPERTY 3: LCF090224 ================= -->
+          <article class="property-card" id="card-LCF090224">
+            <div class="property-visuals">
+              <div class="property-badge-floating">
+                <span class="badge-code">CÓDIGO: LCF090224</span>
+                <span class="badge-status">Altíssimo Padrão</span>
+              </div>
+              <div class="main-image-container" onclick="openPropertyGallery('LCF090224')">
+                <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp" 
+                     alt="Mansão Terras Alphaville Cabo Frio LCF090224" class="main-property-img">
+                <button class="view-gallery-btn" aria-label="Abrir galeria de fotos">
+                  <i class="fas fa-images"></i>
+                  <span>Ver 15 Fotos</span>
+                </button>
+              </div>
+              <div class="thumbnail-strip">
+                <div class="thumb-item active" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp">
+                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp" alt="Fachada Dupla">
+                </div>
+                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBUzx-PUY6COYUhoZubpyvvI7ozGniGgpdkB8g1bc9ivnoIxo1ltq-ygZ_uLPFLkshgiMMUYZ5gVZPv_jkm3ptXxjCz1XlkkpzU9wYoA-0e7ONgdXxjdWkARuoOgTJCgOCQjlox9VY2A7tpzn-LNseomZGb-8MF-c/img1804jpg.webp">
+                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBUzx-PUY6COYUhoZubpyvvI7ozGniGgpdkB8g1bc9ivnoIxo1ltq-ygZ_uLPFLkshgiMMUYZ5gVZPv_jkm3ptXxjCz1XlkkpzU9wYoA-0e7ONgdXxjdWkARuoOgTJCgOCQjlox9VY2A7tpzn-LNseomZGb-8MF-c/img1804jpg.webp" alt="Fachada Noturna">
+                </div>
+                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvnv-uHXc8sTdxmAhUY6xAOB17XGvS4ERYRPJ3dabSAY1QMlt1p9qy-zHHeLbWFztzcTRM5JYhjbdPf_IGaxyUBhQkGn4Q-xbA9bFzT1P7xq-rseAYQWc-IQAAkS288i_6vcQE5RS-_b9VpIhnni2CsC2gk_D0XU/8fb67236-a858-448d-8fc3-057a8a977e1bjpg.webp">
+                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvnv-uHXc8sTdxmAhUY6xAOB17XGvS4ERYRPJ3dabSAY1QMlt1p9qy-zHHeLbWFztzcTRM5JYhjbdPf_IGaxyUBhQkGn4Q-xbA9bFzT1P7xq-rseAYQWc-IQAAkS288i_6vcQE5RS-_b9VpIhnni2CsC2gk_D0XU/8fb67236-a858-448d-8fc3-057a8a977e1bjpg.webp" alt="Living">
+                </div>
+                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvn8vLLLqpw1ACZtrM0vXAquw7lm_zVJwT7eT0VrCTWBAk9URfiwAyxerc4m0QcoRPA2NF5qpz52F4AzXyoW1qK9WQEY-9b4W_DTVfKx-Ges8mbEMh-SEeBpFWjK-EmGL6Bb3RI77PQ1RSH5BRcH2IIGOGNRI1iKd/img1767jpg.webp">
+                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvn8vLLLqpw1ACZtrM0vXAquw7lm_zVJwT7eT0VrCTWBAk9URfiwAyxerc4m0QcoRPA2NF5qpz52F4AzXyoW1qK9WQEY-9b4W_DTVfKx-Ges8mbEMh-SEeBpFWjK-EmGL6Bb3RI77PQ1RSH5BRcH2IIGOGNRI1iKd/img1767jpg.webp" alt="Piscina">
+                </div>
+                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19Nr5TBU4U5XQ28HPJdbcEtXZ3rzhaje2bu0qn-sStszPie_Iea-X1ss98PG3awkIiUw4hhYfSXIGDd05UzxMotVO0xsJkNclFuMZTS8skK7xiTlx3GRJZy7MPN1rj9iD07PUH2NRG5fd1YhdFRxFQXzjPT0XyYKuwWiSQ/img1740jpg.webp">
+                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19Nr5TBU4U5XQ28HPJdbcEtXZ3rzhaje2bu0qn-sStszPie_Iea-X1ss98PG3awkIiUw4hhYfSXIGDd05UzxMotVO0xsJkNclFuMZTS8skK7xiTlx3GRJZy7MPN1rj9iD07PUH2NRG5fd1YhdFRxFQXzjPT0XyYKuwWiSQ/img1740jpg.webp" alt="Cozinha Gourmet">
+                </div>
+              </div>
+            </div>
+
+            <div class="property-details">
+              <div>
+                <span class="property-condo-name"><i class="fas fa-map-marker-alt"></i> Terras Alphaville Cabo Frio</span>
+                <h3 class="property-title">Magnífica Mansão Contemporânea de 350 m² com 4 Suítes</h3>
+                <p class="property-pitch">
+                  Uma obra-prima arquitetônica com pé-direito duplo espetacular. 4 amplas suítes plenas, lazer privativo com piscina, prainha e deck molhado, cozinha gourmet em ilha e acabamentos de altíssimo padrão.
+                </p>
+
+                <div class="specs-grid">
+                  <div class="spec-item">
+                    <span class="spec-label"><i class="fas fa-ruler-combined"></i> Área Útil</span>
+                    <span class="spec-val">350 m²</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label"><i class="fas fa-vector-square"></i> Terreno</span>
+                    <span class="spec-val">360 m²</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label"><i class="fas fa-bed"></i> Suítes</span>
+                    <span class="spec-val">4 amplas suítes</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label"><i class="fas fa-bath"></i> Banheiros</span>
+                    <span class="spec-val">6 banheiros</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label"><i class="fas fa-car"></i> Vagas</span>
+                    <span class="spec-val">4 vagas</span>
+                  </div>
+                  <div class="spec-item">
+                    <span class="spec-label"><i class="fas fa-check-circle"></i> Financiamento</span>
+                    <span class="spec-val" style="color: var(--emerald);">Aprovado (RGI)</span>
+                  </div>
+                </div>
+
+                <div class="features-pills">
+                  <span class="feature-pill"><i class="fas fa-expand-arrows-alt"></i> Pé-Direito Duplo</span>
+                  <span class="feature-pill"><i class="fas fa-bed"></i> 4 Suítes Plenas</span>
+                  <span class="feature-pill"><i class="fas fa-swimming-pool"></i> Piscina com Prainha</span>
+                  <span class="feature-pill"><i class="fas fa-utensils"></i> Cozinha Gourmet em Ilha</span>
+                  <span class="feature-pill"><i class="fas fa-box"></i> Despensa Completa</span>
+                  <span class="feature-pill"><i class="fas fa-fingerprint"></i> Fechadura Digital</span>
+                </div>
+              </div>
+
+              <div class="property-action-footer">
+                <div class="price-box">
+                  <span class="price-label">Valor de Venda</span>
+                  <span class="price-value">R$ 2.700.000</span>
+                  <span class="costs-meta">Condomínio: R$ 700/mês | IPTU: R$ 300/ano</span>
+                </div>
+                <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Terras%20Alphaville%20(C%C3%B3d:%20LCF090224)%20de%20R$%202.700.000.%20Gostaria%20de%20agendar%20uma%20visita%20e%20receber%20mais%20informa%C3%A7%C3%B5es." 
+                   class="btn-whatsapp-property" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-whatsapp"></i>
+                  <span>Agendar Visita (Cód: LCF090224)</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -835,21 +981,6 @@
                 </td>
               </tr>
               <tr>
-                <td><span class="code-tag">LCF090224</span></td>
-                <td class="price-col">R$ 2.700.000</td>
-                <td>350 m²</td>
-                <td>360 m²</td>
-                <td>4 Suítes Plenas</td>
-                <td>Pé-direito duplo + 350m² + 6 banheiros</td>
-                <td>R$ 700 / R$ 300</td>
-                <td>
-                  <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Quero%20visitar%20o%20im%C3%B3vel%20LCF090224." 
-                     class="badge badge-emerald" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i> Conversar
-                  </a>
-                </td>
-              </tr>
-              <tr>
                 <td><span class="code-tag">LCF101026</span></td>
                 <td class="price-col">R$ 2.300.000</td>
                 <td>273 m²</td>
@@ -864,8 +995,113 @@
                   </a>
                 </td>
               </tr>
+              <tr>
+                <td><span class="code-tag">LCF090224</span></td>
+                <td class="price-col">R$ 2.700.000</td>
+                <td>350 m²</td>
+                <td>360 m²</td>
+                <td>4 Suítes Plenas</td>
+                <td>Pé-direito duplo + 350m² + 6 banheiros</td>
+                <td>R$ 700 / R$ 300</td>
+                <td>
+                  <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Quero%20visitar%20o%20im%C3%B3vel%20LCF090224." 
+                     class="badge badge-emerald" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Conversar
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Club & Leisure Section (Fotos do Clube da Pasta)
+         ========================================================================== -->
+    <section class="club-section" id="clube">
+      <div class="container">
+        <div class="section-header">
+          <div class="club-brand-emblem-wrap">
+            <img src="assets/alphaville-logo-square.png" alt="Terras Alphaville Cabo Frio" class="club-alphaville-square-logo">
+          </div>
+          <span class="badge"><i class="fas fa-trophy"></i> Estrutura Alphaville</span>
+          <h2>Um Clube Resort Particular à Sua <span class="gradient-text">Disposição Diária</span></h2>
+          <p class="subtitle">Fotos reais do clube Alphaville Cabo Frio: piscina semi-olímpica, complexo de quadras de tênis e beach tennis, academia de ponta e muito verde.</p>
+        </div>
+
+        <div class="club-gallery-grid">
+          <!-- Foto 1 da pasta -->
+          <div class="club-photo-item span-6" onclick="openClubGallery(0)">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_082858.jpg.jpeg" alt="Clube Alphaville Cabo Frio Piscina" class="club-photo-img">
+            <div class="club-photo-caption">
+              <h4>Complexo Aquático com Piscina Semi-Olímpica</h4>
+              <span>Solarium integrado e piscina infantil para toda a família</span>
+            </div>
+          </div>
+
+          <!-- Foto 2 da pasta -->
+          <div class="club-photo-item span-6" onclick="openClubGallery(1)">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_082943.jpg.jpeg" alt="Área de Lazer e Espaço Gourmet Clube Alphaville" class="club-photo-img">
+            <div class="club-photo-caption">
+              <h4>Sede Social e Espaços de Convivência</h4>
+              <span>Salão de festas privativo, quiosques com churrasqueira e lounge</span>
+            </div>
+          </div>
+
+          <!-- Foto 3 da pasta -->
+          <div class="club-photo-item span-4" onclick="openClubGallery(2)">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083222.jpg.jpeg" alt="Quadras Esportivas Clube Alphaville" class="club-photo-img">
+            <div class="club-photo-caption">
+              <h4>Quadras de Tênis & Beach Tennis</h4>
+              <span>Iluminação profissional para jogos noturnos</span>
+            </div>
+          </div>
+
+          <!-- Foto 4 da pasta -->
+          <div class="club-photo-item span-4" onclick="openClubGallery(3)">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083243.jpg.jpeg" alt="Campo de Futebol Society Alphaville" class="club-photo-img">
+            <div class="club-photo-caption">
+              <h4>Campo de Futebol & Poliesportiva</h4>
+              <span>Aulas esportivas e escolinha para as crianças</span>
+            </div>
+          </div>
+
+          <!-- Foto 5 da pasta -->
+          <div class="club-photo-item span-4" onclick="openClubGallery(4)">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083650.jpg.jpeg" alt="Academia e Paisagismo Alphaville Cabo Frio" class="club-photo-img">
+            <div class="club-photo-caption">
+              <h4>Academia Climatizada & Saunas</h4>
+              <span>Equipamentos modernos para seu treino diário sem sair de casa</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Club Features Cards Grid -->
+        <div class="club-features-grid">
+          <div class="club-feature-card">
+            <div class="club-feature-icon"><i class="fas fa-swimmer"></i></div>
+            <h4>Parque Aquático</h4>
+            <p>Piscina semi-olímpica para treinos, piscina infantil segura e deck molhado com hidromassagem relaxante.</p>
+          </div>
+
+          <div class="club-feature-card">
+            <div class="club-feature-icon"><i class="fas fa-dumbbell"></i></div>
+            <h4>Fitness Center Completo</h4>
+            <p>Academia moderna com esteiras, elípticos, musculação de alta tecnologia e vestiários com sauna seca e a vapor.</p>
+          </div>
+
+          <div class="club-feature-card">
+            <div class="club-feature-icon"><i class="fas fa-table-tennis"></i></div>
+            <h4>Complexo Esportivo</h4>
+            <p>Quadra de tênis de saibro/rápida, quadras de beach tennis, campo de futebol society e quadra poliesportiva coberta.</p>
+          </div>
+
+          <div class="club-feature-card">
+            <div class="club-feature-icon"><i class="fas fa-child"></i></div>
+            <h4>Liberdade para os Filhos</h4>
+            <p>Aulas de natação e futebol dentro do condomínio. Espaço kids, playground arborizado e segurança armada 24 horas.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -982,93 +1218,6 @@
                 <i class="fas fa-expand"></i> Assistir em Tela Cheia
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         Club & Leisure Section (Fotos do Clube da Pasta)
-         ========================================================================== -->
-    <section class="club-section" id="clube">
-      <div class="container">
-        <div class="section-header">
-          <span class="badge"><i class="fas fa-trophy"></i> Estrutura Alphaville</span>
-          <h2>Um Clube Resort Particular à Sua <span class="gradient-text">Disposição Diária</span></h2>
-          <p class="subtitle">Fotos reais do clube Alphaville Cabo Frio: piscina semi-olímpica, complexo de quadras de tênis e beach tennis, academia de ponta e muito verde.</p>
-        </div>
-
-        <div class="club-gallery-grid">
-          <!-- Foto 1 da pasta -->
-          <div class="club-photo-item span-6" onclick="openClubGallery(0)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_082858.jpg.jpeg" alt="Clube Alphaville Cabo Frio Piscina" class="club-photo-img">
-            <div class="club-photo-caption">
-              <h4>Complexo Aquático com Piscina Semi-Olímpica</h4>
-              <span>Solarium integrado e piscina infantil para toda a família</span>
-            </div>
-          </div>
-
-          <!-- Foto 2 da pasta -->
-          <div class="club-photo-item span-6" onclick="openClubGallery(1)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_082943.jpg.jpeg" alt="Área de Lazer e Espaço Gourmet Clube Alphaville" class="club-photo-img">
-            <div class="club-photo-caption">
-              <h4>Sede Social e Espaços de Convivência</h4>
-              <span>Salão de festas privativo, quiosques com churrasqueira e lounge</span>
-            </div>
-          </div>
-
-          <!-- Foto 3 da pasta -->
-          <div class="club-photo-item span-4" onclick="openClubGallery(2)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083222.jpg.jpeg" alt="Quadras Esportivas Clube Alphaville" class="club-photo-img">
-            <div class="club-photo-caption">
-              <h4>Quadras de Tênis & Beach Tennis</h4>
-              <span>Iluminação profissional para jogos noturnos</span>
-            </div>
-          </div>
-
-          <!-- Foto 4 da pasta -->
-          <div class="club-photo-item span-4" onclick="openClubGallery(3)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083243.jpg.jpeg" alt="Campo de Futebol Society Alphaville" class="club-photo-img">
-            <div class="club-photo-caption">
-              <h4>Campo de Futebol & Poliesportiva</h4>
-              <span>Aulas esportivas e escolinha para as crianças</span>
-            </div>
-          </div>
-
-          <!-- Foto 5 da pasta -->
-          <div class="club-photo-item span-4" onclick="openClubGallery(4)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083650.jpg.jpeg" alt="Academia e Paisagismo Alphaville Cabo Frio" class="club-photo-img">
-            <div class="club-photo-caption">
-              <h4>Academia Climatizada & Saunas</h4>
-              <span>Equipamentos modernos para seu treino diário sem sair de casa</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Club Features Cards Grid -->
-        <div class="club-features-grid">
-          <div class="club-feature-card">
-            <div class="club-feature-icon"><i class="fas fa-swimmer"></i></div>
-            <h4>Parque Aquático</h4>
-            <p>Piscina semi-olímpica para treinos, piscina infantil segura e deck molhado com hidromassagem relaxante.</p>
-          </div>
-
-          <div class="club-feature-card">
-            <div class="club-feature-icon"><i class="fas fa-dumbbell"></i></div>
-            <h4>Fitness Center Completo</h4>
-            <p>Academia moderna com esteiras, elípticos, musculação de alta tecnologia e vestiários com sauna seca e a vapor.</p>
-          </div>
-
-          <div class="club-feature-card">
-            <div class="club-feature-icon"><i class="fas fa-table-tennis"></i></div>
-            <h4>Complexo Esportivo</h4>
-            <p>Quadra de tênis de saibro/rápida, quadras de beach tennis, campo de futebol society e quadra poliesportiva coberta.</p>
-          </div>
-
-          <div class="club-feature-card">
-            <div class="club-feature-icon"><i class="fas fa-child"></i></div>
-            <h4>Liberdade para os Filhos</h4>
-            <p>Aulas de natação e futebol dentro do condomínio. Espaço kids, playground arborizado e segurança armada 24 horas.</p>
           </div>
         </div>
       </div>
@@ -1472,11 +1621,15 @@
     <div class="container">
       <div class="footer-top-grid">
         <div class="footer-brand">
-          <img src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpSbjr2aUWTHHmaFp21BN6sPgPVCWJJ9Vhv7cY-d15yTNEqIXeX1lw/logopng.webp" alt="La Côrte Gestão Imobiliária" class="logo-img">
+          <div class="footer-dual-logos">
+            <img src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpSbjr2aUWTHHmaFp21BN6sPgPVCWJJ9Vhv7cY-d15yTNEqIXeX1lw/logopng.webp" alt="La Côrte Gestão Imobiliária" class="logo-img">
+            <span class="footer-brand-divider"></span>
+            <img src="assets/alphaville-logo-square.png" alt="Terras Alphaville Cabo Frio" class="footer-alphaville-logo">
+          </div>
           <p>
             LaCôrte Gestão Imobiliária LTDA.<br>
             CRECI RJ-008889/O.<br>
-            Especialistas em propriedades de alto padrão e condomínios fechados em Cabo Frio e Búzios.
+            Especialistas em propriedades de alto padrão e condomínios fechados no Terras Alphaville Cabo Frio e Búzios.
           </p>
           <div class="footer-socials">
             <a href="https://www.instagram.com/lacorteimoveis/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram La Côrte"><i class="fab fa-instagram"></i></a>
@@ -1488,9 +1641,9 @@
         <div class="footer-col">
           <h4>Imóveis em Destaque</h4>
           <ul class="footer-links">
-            <li><a href="#card-LCF110525">Casa Mobiliada (Cód: LCF110525)</a></li>
-            <li><a href="#card-LCF090224">Mansão 350m² (Cód: LCF090224)</a></li>
-            <li><a href="#card-LCF101026">Casa Nova Cascata (Cód: LCF101026)</a></li>
+            <li><a href="#card-LCF110525">Casa Mobiliada R$ 1.55M (LCF110525)</a></li>
+            <li><a href="#card-LCF101026">Casa Nova Cascata R$ 2.30M (LCF101026)</a></li>
+            <li><a href="#card-LCF090224">Mansão 350m² R$ 2.70M (LCF090224)</a></li>
             <li><a href="#comparativo">Tabela Comparativa</a></li>
           </ul>
         </div>

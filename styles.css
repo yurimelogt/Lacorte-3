@@ -223,6 +223,124 @@ img, video {
   font-weight: 700;
 }
 
+/* ==========================================================================
+   Alphaville Logos & Brand Elements
+   ========================================================================== */
+.header-brand-separator {
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.22);
+  font-weight: 300;
+  font-size: 1.35rem;
+  margin: 0 0.6rem;
+  user-select: none;
+}
+
+.header-alphaville-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.header-alphaville-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--transition-fast);
+}
+
+.header-alphaville-logo:hover {
+  transform: scale(1.04);
+}
+
+.hero-official-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1.5px solid rgba(22, 101, 52, 0.28);
+  border-radius: 50px;
+  padding: 0.55rem 1.4rem 0.55rem 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.hero-alphaville-brand-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hero-official-tag {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #15803d;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-left: 2px solid rgba(21, 128, 61, 0.25);
+  padding-left: 0.9rem;
+}
+
+.properties-brand-pill {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.properties-alphaville-logo {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 6px 20px;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.club-brand-emblem-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.club-alphaville-square-logo {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 14px 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.footer-dual-logos {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.footer-brand-divider {
+  display: inline-block;
+  width: 1px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.footer-alphaville-logo {
+  height: 64px;
+  width: auto;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -306,7 +424,7 @@ img, video {
   display: flex;
   align-items: center;
   padding: 8.5rem 0 5rem;
-  background-color: #FFFFFF;
+  background-color: transparent;
   overflow: hidden;
 }
 
@@ -329,16 +447,17 @@ img, video {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 820px;
+  max-width: 840px;
 }
 
 .hero-card-box {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius-lg);
   padding: 3rem 2.75rem;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  -webkit-backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(2.5px);
 }
 
 .hero-badge-group {
@@ -352,14 +471,17 @@ img, video {
   font-size: clamp(2.2rem, 3.8vw, 3.4rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: var(--text-heading);
+  color: #041226;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 16px rgba(255, 255, 255, 0.9), 0 0 35px rgba(255, 255, 255, 0.7);
   margin-bottom: 1.25rem;
   line-height: 1.2;
 }
 
 .hero-desc {
   font-size: clamp(1rem, 1.4vw, 1.15rem);
-  color: var(--text-light);
+  color: #071930;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85);
   margin-bottom: 2rem;
   line-height: 1.65;
 }
@@ -2046,25 +2168,80 @@ html, body {
   }
 
   .hero-section {
-    padding: 6.5rem 0 3rem;
+    padding: 5.5rem 0 2.5rem;
     min-height: auto;
-    background-color: #FFFFFF;
+    background-color: transparent;
   }
 
   .hero-card-box {
     padding: 1.5rem 1.15rem;
     border-radius: var(--radius-md);
-    background: rgba(255, 255, 255, 0.94);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    -webkit-backdrop-filter: blur(2.5px);
+    backdrop-filter: blur(2.5px);
+  }
+
+  .hero-highlight-item {
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 0.5rem 0.6rem;
+    backdrop-filter: blur(3px);
+  }
+
+  .header-brand-separator {
+    margin: 0 0.35rem;
+    font-size: 1.1rem;
+  }
+
+  .header-alphaville-logo {
+    height: 32px;
+  }
+
+  .hero-official-badge {
+    padding: 0.4rem 1rem 0.4rem 0.75rem;
+    gap: 0.65rem;
+    max-width: 100%;
+    margin-bottom: 1.15rem;
+  }
+
+  .hero-alphaville-brand-img {
+    height: 40px;
+  }
+
+  .hero-official-tag {
+    font-size: 0.72rem;
+    padding-left: 0.65rem;
+  }
+
+  .properties-alphaville-logo {
+    height: 44px;
+    padding: 5px 14px;
+  }
+
+  .club-alphaville-square-logo {
+    height: 100px;
+    padding: 10px 16px;
+  }
+
+  .footer-alphaville-logo {
+    height: 52px;
   }
 
   .hero-title {
     font-size: 1.65rem;
     line-height: 1.25;
+    color: #041226;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 14px rgba(255, 255, 255, 0.9);
   }
 
   .hero-desc {
     font-size: 0.925rem;
+    color: #071930;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
     margin-bottom: 1.25rem;
   }
 
