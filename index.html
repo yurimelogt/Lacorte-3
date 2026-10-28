@@ -66,25 +66,36 @@
       display: none !important;
     }
 
-    /* Card com Altíssima Transparência (o vídeo passa com total nitidez) */
+    /* Card branco semi-transparente — legível sobre a foto aérea */
     .hero-card-box {
-      background: rgba(255, 255, 255, 0.14) !important;
-      -webkit-backdrop-filter: blur(2.5px) !important;
-      backdrop-filter: blur(2.5px) !important;
-      border: 1px solid rgba(255, 255, 255, 0.45) !important;
+      background: rgba(255, 255, 255, 0.62) !important;
+      -webkit-backdrop-filter: blur(8px) !important;
+      backdrop-filter: blur(8px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.75) !important;
       border-radius: 24px !important;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18) !important;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22) !important;
+    }
+
+    /* Frase destacada no hero — verde sólido, sem sombra */
+    .hero-section .hero-card-box .gradient-text,
+    .hero-section .hero-card-box span.gradient-text {
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: #15803d !important;
+      background-clip: unset !important;
+      filter: none !important;
+      color: #15803d !important;
     }
 
     .hero-title {
       color: #041226 !important;
-      text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 16px rgba(255, 255, 255, 0.9), 0 0 35px rgba(255, 255, 255, 0.7) !important;
+      text-shadow: 0 1px 3px rgba(255,255,255,0.9) !important;
     }
 
     .hero-desc {
       color: #071930 !important;
       font-weight: 600 !important;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 12px rgba(255, 255, 255, 0.85) !important;
+      text-shadow: 0 1px 2px rgba(255,255,255,0.9) !important;
     }
 
     /* Logos do Alphaville Ampliadas e Nítidas */
@@ -188,11 +199,11 @@
 
       .hero-card-box {
         padding: 1.5rem 1.15rem !important;
-        background: rgba(255, 255, 255, 0.14) !important;
-        -webkit-backdrop-filter: blur(2.5px) !important;
-        backdrop-filter: blur(2.5px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.45) !important;
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18) !important;
+        background: rgba(255, 255, 255, 0.62) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        backdrop-filter: blur(8px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.75) !important;
+        box-shadow: 0 12px 45px rgba(0, 0, 0, 0.22) !important;
       }
 
       .hero-highlight-item {
@@ -244,14 +255,14 @@
         font-size: 1.65rem !important;
         line-height: 1.25 !important;
         color: #041226 !important;
-        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95), 0 0 14px rgba(255, 255, 255, 0.9) !important;
+        text-shadow: 0 1px 3px rgba(255,255,255,0.9) !important;
       }
 
       .hero-desc {
         font-size: 0.925rem !important;
         color: #071930 !important;
         font-weight: 600 !important;
-        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95) !important;
+        text-shadow: 0 1px 2px rgba(255,255,255,0.9) !important;
         margin-bottom: 1.25rem !important;
       }
 
@@ -567,11 +578,8 @@
          Hero Section (SOMENTE O VÍDEO PURO, SEM IMAGEM DE FUNDO/POSTER)
          ========================================================================== -->
     <section class="hero-section" id="hero">
-      <!-- Vídeo Puro sem imagem de fundo ou sobreposição escura - Somente o vídeo em alta definição -->
-      <video class="hero-bg-media" autoplay muted loop playsinline preload="auto" style="opacity: 1; filter: none; object-fit: cover;">
-        <source src="ALPHAVILLE%20LA%20CORTE/6A457675-804A-4714-9BED-57DDEF34AAC3.MP4" type="video/mp4">
-        <source src="ALPHAVILLE LA CORTE/6A457675-804A-4714-9BED-57DDEF34AAC3.MP4" type="video/mp4">
-      </video>
+      <!-- Imagem aérea do condomínio Terras Alphaville Cabo Frio -->
+      <img class="hero-bg-media" src="assets/hero-aerial.jpg" alt="Vista aérea do Terras Alphaville Cabo Frio" loading="eager">
 
       <div class="container">
         <div class="hero-content">
