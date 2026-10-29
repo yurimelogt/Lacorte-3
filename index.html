@@ -24,11 +24,11 @@
   <link rel="apple-touch-icon" href="assets/alphaville-favicon.png">
 
   <!-- Stylesheet com Cache-Buster & Estilos Críticos Diretos no HTML -->
-  <link rel="stylesheet" href="styles.css?v=20261023_transparent_video_v5">
+  <link rel="stylesheet" href="styles.css?v=20261029_solid_gold_v4">
   <style>
     /* ==========================================================================
        LA CÔRTE IMÓVEIS - AJUSTES CRÍTICOS DIRETAMENTE NO INDEX.HTML
-       1. Vídeo Inicial 100% Visível com Card Altamente Translúcido
+       1. Card Principal Preto com Fundo Transparente Nítido (Blur Reduzido)
        2. Logos do Alphaville em Destaque & Proporções Ampliadas
        3. Smartphone & Console: Zero Cortes, Zero Rolagem Lateral, 100% Responsivo
        ========================================================================== */
@@ -43,7 +43,7 @@
       box-sizing: border-box;
     }
 
-    /* Hero Section: Vídeo 100% Puro e Totalmente Visível sem películas escuras */
+    /* Hero Section: Imagem/Mídia de fundo 100% visível */
     .hero-section {
       background: transparent !important;
       position: relative !important;
@@ -66,36 +66,78 @@
       display: none !important;
     }
 
-    /* Card branco semi-transparente — legível sobre a foto aérea */
+    /* Card principal preto translúcido nítido — fundo da imagem perfeitamente visível */
     .hero-card-box {
-      background: rgba(255, 255, 255, 0.62) !important;
-      -webkit-backdrop-filter: blur(8px) !important;
-      backdrop-filter: blur(8px) !important;
-      border: 1px solid rgba(255, 255, 255, 0.75) !important;
+      background: rgba(0, 0, 0, 0.48) !important;
+      -webkit-backdrop-filter: blur(1px) !important;
+      backdrop-filter: blur(1px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.22) !important;
       border-radius: 24px !important;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22) !important;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35) !important;
     }
 
-    /* Frase destacada no hero — verde sólido, sem sombra */
+    /* Badges sobre o card escuro */
+    .hero-card-box .badge {
+      background: rgba(245, 158, 11, 0.25) !important;
+      border: 1px solid rgba(251, 191, 36, 0.5) !important;
+      color: #FDE047 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .hero-card-box .badge.badge-emerald {
+      background: rgba(16, 185, 129, 0.25) !important;
+      border: 1px solid rgba(52, 211, 153, 0.5) !important;
+      color: #6EE7B7 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    .hero-card-box .badge.badge-blue {
+      background: rgba(14, 165, 233, 0.25) !important;
+      border: 1px solid rgba(56, 189, 248, 0.5) !important;
+      color: #7DD3FC !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    /* Frase destacada no hero — amarelo sólido com leve sombreamento discreto */
     .hero-section .hero-card-box .gradient-text,
     .hero-section .hero-card-box span.gradient-text {
       background: none !important;
       -webkit-background-clip: unset !important;
-      -webkit-text-fill-color: #15803d !important;
+      -webkit-text-fill-color: #E5B824 !important;
       background-clip: unset !important;
       filter: none !important;
-      color: #15803d !important;
+      color: #E5B824 !important;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
     }
 
     .hero-title {
-      color: #041226 !important;
-      text-shadow: 0 1px 3px rgba(255,255,255,0.9) !important;
+      color: #FFFFFF !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 1px 3px rgba(0, 0, 0, 0.9) !important;
     }
 
     .hero-desc {
-      color: #071930 !important;
-      font-weight: 600 !important;
-      text-shadow: 0 1px 2px rgba(255,255,255,0.9) !important;
+      color: #F1F5F9 !important;
+      font-weight: 500 !important;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9) !important;
+    }
+
+    .hero-desc strong {
+      color: #FFFFFF !important;
+      font-weight: 700 !important;
+    }
+
+    .hero-card-box .hero-highlights-row {
+      border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .hero-card-box .hero-highlight-item strong {
+      color: #FFFFFF !important;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9) !important;
+    }
+
+    .hero-card-box .hero-highlight-item span {
+      color: #E2E8F0 !important;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9) !important;
     }
 
     /* Logos do Alphaville Ampliadas e Nítidas */
@@ -199,19 +241,19 @@
 
       .hero-card-box {
         padding: 1.5rem 1.15rem !important;
-        background: rgba(255, 255, 255, 0.62) !important;
-        -webkit-backdrop-filter: blur(8px) !important;
-        backdrop-filter: blur(8px) !important;
-        border: 1px solid rgba(255, 255, 255, 0.75) !important;
-        box-shadow: 0 12px 45px rgba(0, 0, 0, 0.22) !important;
+        background: rgba(0, 0, 0, 0.48) !important;
+        -webkit-backdrop-filter: blur(1px) !important;
+        backdrop-filter: blur(1px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.22) !important;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35) !important;
       }
 
       .hero-highlight-item {
-        background: rgba(255, 255, 255, 0.4) !important;
-        border: 1px solid rgba(255, 255, 255, 0.6) !important;
+        background: rgba(0, 0, 0, 0.25) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
         border-radius: 8px !important;
         padding: 0.5rem 0.6rem !important;
-        backdrop-filter: blur(3px) !important;
+        backdrop-filter: none !important;
       }
 
       .header-brand-separator {
@@ -254,15 +296,15 @@
       .hero-title {
         font-size: 1.65rem !important;
         line-height: 1.25 !important;
-        color: #041226 !important;
-        text-shadow: 0 1px 3px rgba(255,255,255,0.9) !important;
+        color: #FFFFFF !important;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
       }
 
       .hero-desc {
         font-size: 0.925rem !important;
-        color: #071930 !important;
-        font-weight: 600 !important;
-        text-shadow: 0 1px 2px rgba(255,255,255,0.9) !important;
+        color: #E2E8F0 !important;
+        font-weight: 500 !important;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
         margin-bottom: 1.25rem !important;
       }
 
