@@ -3,6 +3,7 @@
 
 <head>
   <!-- Google tag + conversão de clique no WhatsApp -->
+<<<<<<< HEAD
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472925320"></script>
 
   <script>
@@ -46,6 +47,51 @@
       }
     });
   </script>
+=======
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472925320"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+  gtag('config', 'AW-18472925320');
+
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof url !== 'undefined') {
+        window.location = url;
+      }
+    };
+
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18472925320/jlAiCMWi-p0dEIjxyehE',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': callback
+    });
+
+    return false;
+  }
+
+  document.addEventListener('click', function (event) {
+    if (!(event.target instanceof Element)) return;
+
+    var link = event.target.closest('a[href]');
+    if (!link) return;
+
+    var whatsappHosts = [
+      'wa.me',
+      'api.whatsapp.com',
+      'web.whatsapp.com'
+    ];
+
+    if (whatsappHosts.includes(link.hostname)) {
+      gtag_report_conversion();
+    }
+  });
+</script>
+>>>>>>> e48fab4cfea963ccaa2354f731edfcb97372069c
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Terras Alphaville Cabo Frio | Casas de Alto Padrão - La Côrte Imóveis</title>
