@@ -14,7 +14,7 @@ Esta Landing Page foi desenvolvida com foco em **design de luxo, alta conversão
    - **Diferenciais:** Piscina privativa, varanda gourmet, churrasqueira, adega, fechadura digital, jardim.
 
 2. **LCF090224**: Magnífica Mansão Contemporânea com Pé-Direito Duplo
-   - **Valor:** R$ 2.700.000,00
+   - **Valor:** R$ 2.500.000,00
    - **Área Útil:** 350 m² | **Terreno:** 360 m²
    - **Configuração:** 4 amplas suítes plenas, 6 banheiros, 4 vagas
    - **Diferenciais:** Pé-direito duplo imponente, piscina com prainha e deck molhado, cozinha gourmet em ilha com despensa.

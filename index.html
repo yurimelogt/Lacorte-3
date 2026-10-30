@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+  <!-- Google tag + conversão de clique no WhatsApp -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18472925320"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    gtag('js', new Date());
+    gtag('config', 'AW-18472925320');
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof url !== 'undefined') {
+          window.location = url;
+        }
+      };
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18472925320/jlAiCMWi-p0dEIjxyehE',
+        'value': 1.0,
+        'currency': 'BRL',
+        'event_callback': callback
+      });
+
+      return false;
+    }
+
+    document.addEventListener('click', function (event) {
+      if (!(event.target instanceof Element)) return;
+
+      var link = event.target.closest('a[href]');
+      if (!link) return;
+
+      var whatsappHosts = [
+        'wa.me',
+        'api.whatsapp.com',
+        'web.whatsapp.com'
+      ];
+
+      if (whatsappHosts.includes(link.hostname)) {
+        gtag_report_conversion();
+      }
+    });
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <title>Terras Alphaville Cabo Frio | Casas de Alto Padrão - La Côrte Imóveis</title>
-  <meta name="description" content="Oportunidade única: Casas exclusivas de 4 quartos e 4 suítes prontas para morar no Terras Alphaville Cabo Frio. A 2 min de Búzios, condomínio clube resort, segurança 24h e aeroporto internacional.">
-  <meta name="keywords" content="Alphaville Cabo Frio, Terras Alphaville, La Corte Imoveis, Casa em condominio Cabo Frio, imoveis de luxo Cabo Frio Búzios, LCF110525, LCF090224, LCF101026">
+  <meta name="description"
+    content="Oportunidade única: Casas exclusivas de 4 quartos e 4 suítes prontas para morar no Terras Alphaville Cabo Frio. A 2 min de Búzios, condomínio clube resort, segurança 24h e aeroporto internacional.">
+  <meta name="keywords"
+    content="Alphaville Cabo Frio, Terras Alphaville, La Corte Imoveis, Casa em condominio Cabo Frio, imoveis de luxo Cabo Frio Búzios, LCF110525, LCF090224, LCF101026">
   <meta name="author" content="La Côrte Gestão Imobiliária">
   <link rel="canonical" href="https://www.lacorteimoveis.com.br/">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Terras Alphaville Cabo Frio | Casas de Luxo Prontas - La Côrte Imóveis">
-  <meta property="og:description" content="Viva com segurança armada 24h, clube resort privativo e a 2 min de Búzios. Casas de 4 quartos prontas para morar. Fale direto no WhatsApp!">
-  <meta property="og:image" content="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp">
+  <meta property="og:description"
+    content="Viva com segurança armada 24h, clube resort privativo e a 2 min de Búzios. Casas de 4 quartos prontas para morar. Fale direto no WhatsApp!">
+  <meta property="og:image"
+    content="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp">
 
   <!-- Icons & Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
+
   <!-- Favicon Oficial Terras Alphaville -->
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="128x128" href="assets/alphaville-favicon.png">
@@ -32,14 +81,17 @@
        2. Logos do Alphaville em Destaque & Proporções Ampliadas
        3. Smartphone & Console: Zero Cortes, Zero Rolagem Lateral, 100% Responsivo
        ========================================================================== */
-    html, body {
+    html,
+    body {
       overflow-x: hidden !important;
       max-width: 100vw !important;
       width: 100% !important;
       background-color: #FFFFFF !important;
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
     }
 
@@ -191,26 +243,31 @@
 
     /* Desktop: Colunas Perfeitamente Alinhadas, Sem Espaço em Branco */
     @media (min-width: 993px) {
-      .property-card, 
+
+      .property-card,
       .property-card.reverse {
         display: grid !important;
         align-items: stretch !important;
       }
+
       .property-visuals {
         height: 100% !important;
         display: flex !important;
         flex-direction: column !important;
       }
+
       .main-image-container {
         flex: 1 1 auto !important;
         height: 100% !important;
         min-height: 400px !important;
       }
+
       .main-property-img {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
       }
+
       .thumbnail-strip {
         flex-shrink: 0 !important;
       }
@@ -225,7 +282,8 @@
       }
 
       .logo-tagline {
-        display: none !important; /* Cabeçalho limpo em 1 linha */
+        display: none !important;
+        /* Cabeçalho limpo em 1 linha */
       }
 
       .btn-whatsapp-header {
@@ -321,7 +379,7 @@
       }
 
       /* Card do Imóvel no Celular */
-      .property-card, 
+      .property-card,
       .property-card.reverse {
         display: flex !important;
         flex-direction: column !important;
@@ -494,23 +552,29 @@
       .container {
         padding: 0 0.65rem !important;
       }
+
       .logo-img {
         height: 30px !important;
       }
+
       .btn-whatsapp-header {
         padding: 0.38rem 0.65rem !important;
         font-size: 0.72rem !important;
       }
+
       .property-details {
         padding: 1.15rem 0.65rem !important;
       }
+
       .specs-grid {
         gap: 0.45rem !important;
         padding: 0.65rem !important;
       }
+
       .price-box .price-value {
         font-size: 1.6rem !important;
       }
+
       .btn-whatsapp-property {
         font-size: 0.8rem !important;
         padding: 0.75rem 0.65rem !important;
@@ -573,6 +637,7 @@
     ];
   </script>
 </head>
+
 <body>
 
   <!-- ==========================================================================
@@ -582,11 +647,14 @@
     <div class="container header-container">
       <div class="logo-wrapper">
         <a href="#hero" aria-label="La Côrte Imóveis - Início" class="header-brand-link">
-          <img src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpSbjr2aUWTHHmaFp21BN6sPgPVCWJJ9Vhv7cY-d15yTNEqIXeX1lw/logopng.webp" alt="La Côrte Imóveis" class="logo-img">
+          <img
+            src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpSbjr2aUWTHHmaFp21BN6sPgPVCWJJ9Vhv7cY-d15yTNEqIXeX1lw/logopng.webp"
+            alt="La Côrte Imóveis" class="logo-img">
         </a>
         <span class="header-brand-separator" aria-hidden="true">|</span>
         <div class="header-alphaville-wrap">
-          <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio" class="header-alphaville-logo">
+          <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio"
+            class="header-alphaville-logo">
         </div>
       </div>
 
@@ -603,8 +671,8 @@
 
       <div class="header-actions">
         <!-- Botão WhatsApp SEM o número, limpo e direto -->
-        <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20do%20Terras%20Alphaville%20Cabo%20Frio%20e%20gostaria%20de%20falar%20com%20um%20consultor%20La%20C%C3%B4rte." 
-           class="btn-whatsapp-header" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20do%20Terras%20Alphaville%20Cabo%20Frio%20e%20gostaria%20de%20falar%20com%20um%20consultor%20La%20C%C3%B4rte."
+          class="btn-whatsapp-header" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-whatsapp"></i>
           <span>WhatsApp</span>
         </a>
@@ -621,13 +689,15 @@
          ========================================================================== -->
     <section class="hero-section" id="hero">
       <!-- Imagem aérea do condomínio Terras Alphaville Cabo Frio -->
-      <img class="hero-bg-media" src="assets/hero-aerial.jpg" alt="Vista aérea do Terras Alphaville Cabo Frio" loading="eager">
+      <img class="hero-bg-media" src="assets/hero-aerial.jpg" alt="Vista aérea do Terras Alphaville Cabo Frio"
+        loading="eager">
 
       <div class="container">
         <div class="hero-content">
           <div class="hero-card-box">
             <div class="hero-official-badge">
-              <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio" class="hero-alphaville-brand-img">
+              <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio"
+                class="hero-alphaville-brand-img">
               <span class="hero-official-tag"><i class="fas fa-shield-alt"></i> Condomínio Fechado Oficial</span>
             </div>
 
@@ -642,7 +712,10 @@
             </h1>
 
             <p class="hero-desc">
-              Fuja do estresse e da insegurança das capitais. O <strong>Terras Alphaville Cabo Frio</strong> oferece casas prontas de 4 quartos e 4 suítes, cercadas por natureza exuberante, infraestrutura de resort internacional, a apenas <strong>2 minutos da entrada de Búzios</strong> e <strong>5 minutos das praias mais paradisíacas</strong> do Brasil.
+              Fuja do estresse e da insegurança das capitais. O <strong>Terras Alphaville Cabo Frio</strong> oferece
+              casas prontas de 4 quartos e 4 suítes, cercadas por natureza exuberante, infraestrutura de resort
+              internacional, a apenas <strong>2 minutos da entrada de Búzios</strong> e <strong>5 minutos das praias
+                mais paradisíacas</strong> do Brasil.
             </p>
 
             <div class="hero-cta-group">
@@ -650,8 +723,8 @@
                 <span>Conhecer os 3 Imóveis</span>
                 <i class="fas fa-arrow-down"></i>
               </a>
-              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Gostaria%20de%20receber%20informa%C3%A7%C3%B5es%20exclusivas%20das%20casas%20no%20Terras%20Alphaville%20Cabo%20Frio." 
-                 class="btn-whatsapp-hero" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Gostaria%20de%20receber%20informa%C3%A7%C3%B5es%20exclusivas%20das%20casas%20no%20Terras%20Alphaville%20Cabo%20Frio."
+                class="btn-whatsapp-hero" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 <span>Falar com Especialista</span>
               </a>
@@ -688,11 +761,13 @@
       <div class="container">
         <div class="section-header">
           <div class="properties-brand-pill">
-            <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio" class="properties-alphaville-logo">
+            <img src="assets/alphaville-logo-horizontal.png" alt="Terras Alphaville Cabo Frio"
+              class="properties-alphaville-logo">
           </div>
           <span class="badge"><i class="fas fa-key"></i> Oportunidades Selecionadas La Côrte</span>
           <h2>Casas Prontas de Alto Padrão no <span class="gradient-text">Terras Alphaville</span></h2>
-          <p class="subtitle">Três residências exclusivas com arquitetura contemporânea, lazer privativo impecável e alto potencial de valorização.</p>
+          <p class="subtitle">Três residências exclusivas com arquitetura contemporânea, lazer privativo impecável e
+            alto potencial de valorização.</p>
         </div>
 
         <div class="property-cards-container">
@@ -705,38 +780,57 @@
                 <span class="badge-status">Porteira Fechada</span>
               </div>
               <div class="main-image-container" onclick="openPropertyGallery('LCF110525')">
-                <img src="https://s01.jetimgs.com/tnkmRJ8vb8l2owt5NUpzkSxlTgZRQUk7uf0Oe-u15gI4O6ve2Tu62n5sWtszPyf8IdmyXZs89wP2IbwkIk_1ncf5RipZ3YRxRfgQRwlsLyNiQ3gFYhqn-ujZJbHDZq6MSiey-P_5MgeZb-1Yi-nddRFwigyWIQWpctg3BUxhfbtfGHGDW0Ab/armacaodos-58jpg.webp" 
-                     alt="Casa Moderna Alphaville Cabo Frio LCF110525" class="main-property-img">
+                <img
+                  src="https://s01.jetimgs.com/tnkmRJ8vb8l2owt5NUpzkSxlTgZRQUk7uf0Oe-u15gI4O6ve2Tu62n5sWtszPyf8IdmyXZs89wP2IbwkIk_1ncf5RipZ3YRxRfgQRwlsLyNiQ3gFYhqn-ujZJbHDZq6MSiey-P_5MgeZb-1Yi-nddRFwigyWIQWpctg3BUxhfbtfGHGDW0Ab/armacaodos-58jpg.webp"
+                  alt="Casa Moderna Alphaville Cabo Frio LCF110525" class="main-property-img">
                 <button class="view-gallery-btn" aria-label="Abrir galeria de fotos">
                   <i class="fas fa-images"></i>
                   <span>Ver 15 Fotos</span>
                 </button>
               </div>
               <div class="thumbnail-strip">
-                <div class="thumb-item active" data-full="https://s01.jetimgs.com/tnkmRJ8vb8l2owt5NUpzkSxlTgZRQUk7uf0Oe-u15gI4O6ve2Tu62n5sWtszPyf8IdmyXZs89wP2IbwkIk_1ncf5RipZ3YRxRfgQRwlsLyNiQ3gFYhqn-ujZJbHDZq6MSiey-P_5MgeZb-1Yi-nddRFwigyWIQWpctg3BUxhfbtfGHGDW0Ab/armacaodos-58jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRJ8vb8l2owt5NUpzkSxlTgZRQUk7uf0Oe-u15gI4O6ve2Tu62n5sWtszPyf8IdmyXZs89wP2IbwkIk_1ncf5RipZ3YRxRfgQRwlsLyNiQ3gFYhqn-ujZJbHDZq6MSiey-P_5MgeZb-1Yi-nddRFwigyWIQWpctg3BUxhfbtfGHGDW0Ab/armacaodos-58jpg.webp" alt="Fachada">
+                <div class="thumb-item active"
+                  data-full="https://s01.jetimgs.com/tnkmRJ8vb8l2owt5NUpzkSxlTgZRQUk7uf0Oe-u15gI4O6ve2Tu62n5sWtszPyf8IdmyXZs89wP2IbwkIk_1ncf5RipZ3YRxRfgQRwlsLyNiQ3gFYhqn-ujZJbHDZq6MSiey-P_5MgeZb-1Yi-nddRFwigyWIQWpctg3BUxhfbtfGHGDW0Ab/armacaodos-58jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRJ8vb8l2owt5NUpzkSxlTgZRQUk7uf0Oe-u15gI4O6ve2Tu62n5sWtszPyf8IdmyXZs89wP2IbwkIk_1ncf5RipZ3YRxRfgQRwlsLyNiQ3gFYhqn-ujZJbHDZq6MSiey-P_5MgeZb-1Yi-nddRFwigyWIQWpctg3BUxhfbtfGHGDW0Ab/armacaodos-58jpg.webp"
+                    alt="Fachada">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19M7vkr5mDU_lQt7OZurcDlnu3zz_j53zo5pa4L6co0qor7eAidIfdrJ1xoeKZ4pMp6SHx-4jSkZ_3Y3TSlOe4V22W9BOyNdJ1gW6DD07LcjHawOnnO2jCg6Mev0tDA_w3DfdToahFvtN8Kb_9EcSw8FwYSGGXYnkiVm/armacaodos-3jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19M7vkr5mDU_lQt7OZurcDlnu3zz_j53zo5pa4L6co0qor7eAidIfdrJ1xoeKZ4pMp6SHx-4jSkZ_3Y3TSlOe4V22W9BOyNdJ1gW6DD07LcjHawOnnO2jCg6Mev0tDA_w3DfdToahFvtN8Kb_9EcSw8FwYSGGXYnkiVm/armacaodos-3jpg.webp" alt="Lazer privativo">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19M7vkr5mDU_lQt7OZurcDlnu3zz_j53zo5pa4L6co0qor7eAidIfdrJ1xoeKZ4pMp6SHx-4jSkZ_3Y3TSlOe4V22W9BOyNdJ1gW6DD07LcjHawOnnO2jCg6Mev0tDA_w3DfdToahFvtN8Kb_9EcSw8FwYSGGXYnkiVm/armacaodos-3jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19M7vkr5mDU_lQt7OZurcDlnu3zz_j53zo5pa4L6co0qor7eAidIfdrJ1xoeKZ4pMp6SHx-4jSkZ_3Y3TSlOe4V22W9BOyNdJ1gW6DD07LcjHawOnnO2jCg6Mev0tDA_w3DfdToahFvtN8Kb_9EcSw8FwYSGGXYnkiVm/armacaodos-3jpg.webp"
+                    alt="Lazer privativo">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19NrsXsv7OJUYY5UnECkoe7S34DhoRmvS4ERYWPJG1rhwkEiQ71hbgGrdUqgGW67yPUXGBv7MxUcpL1J_fwOPoUcgczXOzUnrlerw3scNwYpWRqSZFOe3fW18gstC-gM-G-VmbnAn7vkoUmZpldg3tvnfp6NGQFJF_r6/img4368jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19NrsXsv7OJUYY5UnECkoe7S34DhoRmvS4ERYWPJG1rhwkEiQ71hbgGrdUqgGW67yPUXGBv7MxUcpL1J_fwOPoUcgczXOzUnrlerw3scNwYpWRqSZFOe3fW18gstC-gM-G-VmbnAn7vkoUmZpldg3tvnfp6NGQFJF_r6/img4368jpg.webp" alt="Sala">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19NrsXsv7OJUYY5UnECkoe7S34DhoRmvS4ERYWPJG1rhwkEiQ71hbgGrdUqgGW67yPUXGBv7MxUcpL1J_fwOPoUcgczXOzUnrlerw3scNwYpWRqSZFOe3fW18gstC-gM-G-VmbnAn7vkoUmZpldg3tvnfp6NGQFJF_r6/img4368jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19NrsXsv7OJUYY5UnECkoe7S34DhoRmvS4ERYWPJG1rhwkEiQ71hbgGrdUqgGW67yPUXGBv7MxUcpL1J_fwOPoUcgczXOzUnrlerw3scNwYpWRqSZFOe3fW18gstC-gM-G-VmbnAn7vkoUmZpldg3tvnfp6NGQFJF_r6/img4368jpg.webp"
+                    alt="Sala">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19M7vnv-mNMvbp1EnECac2WuMSUReyxViB8nPwy2V11lekB2kZyY1ChbyKdQOSoopHX4EneJhmlZLUwNvD8RDL0mQ-V5_27DrRGXDIqrvry24GkNlrfzjKkqubN17jROCzHfdTYDON7bnY8tiugfjcTJIIGCGOntG1Al/img4370jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19M7vnv-mNMvbp1EnECac2WuMSUReyxViB8nPwy2V11lekB2kZyY1ChbyKdQOSoopHX4EneJhmlZLUwNvD8RDL0mQ-V5_27DrRGXDIqrvry24GkNlrfzjKkqubN17jROCzHfdTYDON7bnY8tiugfjcTJIIGCGOntG1Al/img4370jpg.webp" alt="Cozinha">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19M7vnv-mNMvbp1EnECac2WuMSUReyxViB8nPwy2V11lekB2kZyY1ChbyKdQOSoopHX4EneJhmlZLUwNvD8RDL0mQ-V5_27DrRGXDIqrvry24GkNlrfzjKkqubN17jROCzHfdTYDON7bnY8tiugfjcTJIIGCGOntG1Al/img4370jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19M7vnv-mNMvbp1EnECac2WuMSUReyxViB8nPwy2V11lekB2kZyY1ChbyKdQOSoopHX4EneJhmlZLUwNvD8RDL0mQ-V5_27DrRGXDIqrvry24GkNlrfzjKkqubN17jROCzHfdTYDON7bnY8tiugfjcTJIIGCGOntG1Al/img4370jpg.webp"
+                    alt="Cozinha">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDZGBEfsovn8UPQVnhMxfFMnqzhcifwfWzE_92VxbTT0yIu2x734KhCplwdi-JoykaCt0pD6tfilwHR9qPKQiU7q1B6xhEltus8fgdk26G3izlRukRV8Ea8hv1OJ1gefLfNTqYSJHd89AJ_A3CaUV-nfr1TyYrANJeCw/img4375jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDZGBEfsovn8UPQVnhMxfFMnqzhcifwfWzE_92VxbTT0yIu2x734KhCplwdi-JoykaCt0pD6tfilwHR9qPKQiU7q1B6xhEltus8fgdk26G3izlRukRV8Ea8hv1OJ1gefLfNTqYSJHd89AJ_A3CaUV-nfr1TyYrANJeCw/img4375jpg.webp" alt="Suíte">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDZGBEfsovn8UPQVnhMxfFMnqzhcifwfWzE_92VxbTT0yIu2x734KhCplwdi-JoykaCt0pD6tfilwHR9qPKQiU7q1B6xhEltus8fgdk26G3izlRukRV8Ea8hv1OJ1gefLfNTqYSJHd89AJ_A3CaUV-nfr1TyYrANJeCw/img4375jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDZGBEfsovn8UPQVnhMxfFMnqzhcifwfWzE_92VxbTT0yIu2x734KhCplwdi-JoykaCt0pD6tfilwHR9qPKQiU7q1B6xhEltus8fgdk26G3izlRukRV8Ea8hv1OJ1gefLfNTqYSJHd89AJ_A3CaUV-nfr1TyYrANJeCw/img4375jpg.webp"
+                    alt="Suíte">
                 </div>
               </div>
             </div>
 
             <div class="property-details">
               <div>
-                <span class="property-condo-name"><i class="fas fa-map-marker-alt"></i> Terras Alphaville Cabo Frio</span>
+                <span class="property-condo-name"><i class="fas fa-map-marker-alt"></i> Terras Alphaville Cabo
+                  Frio</span>
                 <h3 class="property-title">Casa Moderna 100% Mobiliada & Decorada (Porteira Fechada)</h3>
                 <p class="property-pitch">
-                  Pronta para morar com sofisticação total! Marcenaria planejada, piscina privativa com deck, espaço gourmet com churrasqueira integrada, adega e aquecimento a gás. Localizada a 2 minutos da entrada de Búzios.
+                  Pronta para morar com sofisticação total! Marcenaria planejada, piscina privativa com deck, espaço
+                  gourmet com churrasqueira integrada, adega e aquecimento a gás. Localizada a 2 minutos da entrada de
+                  Búzios.
                 </p>
 
                 <div class="specs-grid">
@@ -782,8 +876,8 @@
                   <span class="price-value">R$ 1.550.000</span>
                   <span class="costs-meta">Condomínio: R$ 580/mês | IPTU: R$ 300/ano</span>
                 </div>
-                <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Terras%20Alphaville%20(C%C3%B3d:%20LCF110525)%20de%20R$%201.550.000.%20Gostaria%20de%20agendar%20uma%20visita%20e%20receber%20mais%20informa%C3%A7%C3%B5es." 
-                   class="btn-whatsapp-property" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Terras%20Alphaville%20(C%C3%B3d:%20LCF110525)%20de%20R$%201.550.000.%20Gostaria%20de%20agendar%20uma%20visita%20e%20receber%20mais%20informa%C3%A7%C3%B5es."
+                  class="btn-whatsapp-property" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-whatsapp"></i>
                   <span>Agendar Visita (Cód: LCF110525)</span>
                 </a>
@@ -800,38 +894,56 @@
                 <span class="badge-status">Casa Nova / Moderna</span>
               </div>
               <div class="main-image-container" onclick="openPropertyGallery('LCF101026')">
-                <img src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpTbjqWdD6JZIcnbb5zHkdSBhv1SaBN0qOrKaGHcHV6l6bFr3j4cHRCmZU4mJz2UVUyEs8cdmHw_ESz1Bm-5R1E1xydGna4PO9AkwDXOvHKCCeCaaAoJg/img2370jpg.webp" 
-                     alt="Casa Nova Alphaville Cabo Frio LCF101026" class="main-property-img">
+                <img
+                  src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpTbjqWdD6JZIcnbb5zHkdSBhv1SaBN0qOrKaGHcHV6l6bFr3j4cHRCmZU4mJz2UVUyEs8cdmHw_ESz1Bm-5R1E1xydGna4PO9AkwDXOvHKCCeCaaAoJg/img2370jpg.webp"
+                  alt="Casa Nova Alphaville Cabo Frio LCF101026" class="main-property-img">
                 <button class="view-gallery-btn" aria-label="Abrir galeria de fotos">
                   <i class="fas fa-images"></i>
                   <span>Ver 15 Fotos</span>
                 </button>
               </div>
               <div class="thumbnail-strip">
-                <div class="thumb-item active" data-full="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpTbjqWdD6JZIcnbb5zHkdSBhv1SaBN0qOrKaGHcHV6l6bFr3j4cHRCmZU4mJz2UVUyEs8cdmHw_ESz1Bm-5R1E1xydGna4PO9AkwDXOvHKCCeCaaAoJg/img2370jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpTbjqWdD6JZIcnbb5zHkdSBhv1SaBN0qOrKaGHcHV6l6bFr3j4cHRCmZU4mJz2UVUyEs8cdmHw_ESz1Bm-5R1E1xydGna4PO9AkwDXOvHKCCeCaaAoJg/img2370jpg.webp" alt="Fachada Moderna">
+                <div class="thumb-item active"
+                  data-full="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpTbjqWdD6JZIcnbb5zHkdSBhv1SaBN0qOrKaGHcHV6l6bFr3j4cHRCmZU4mJz2UVUyEs8cdmHw_ESz1Bm-5R1E1xydGna4PO9AkwDXOvHKCCeCaaAoJg/img2370jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpTbjqWdD6JZIcnbb5zHkdSBhv1SaBN0qOrKaGHcHV6l6bFr3j4cHRCmZU4mJz2UVUyEs8cdmHw_ESz1Bm-5R1E1xydGna4PO9AkwDXOvHKCCeCaaAoJg/img2370jpg.webp"
+                    alt="Fachada Moderna">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRID_q3pKFTcvum8e542WSOg9-QDuT8jaRy5feiui9bTNivnooxdTomzdMKhijtBEOoTVKmcOcZFhDYdFwL_Ks8EeWP78uL2NwyZgwtVKjtOWaZxaS_ScHHDUQdD5YMTJChOZCc81shEz9sdGBK2xPAmE7G30FpPGJw/img2375jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRID_q3pKFTcvum8e542WSOg9-QDuT8jaRy5feiui9bTNivnooxdTomzdMKhijtBEOoTVKmcOcZFhDYdFwL_Ks8EeWP78uL2NwyZgwtVKjtOWaZxaS_ScHHDUQdD5YMTJChOZCc81shEz9sdGBK2xPAmE7G30FpPGJw/img2375jpg.webp" alt="Área Gourmet">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRID_q3pKFTcvum8e542WSOg9-QDuT8jaRy5feiui9bTNivnooxdTomzdMKhijtBEOoTVKmcOcZFhDYdFwL_Ks8EeWP78uL2NwyZgwtVKjtOWaZxaS_ScHHDUQdD5YMTJChOZCc81shEz9sdGBK2xPAmE7G30FpPGJw/img2375jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRID_q3pKFTcvum8e542WSOg9-QDuT8jaRy5feiui9bTNivnooxdTomzdMKhijtBEOoTVKmcOcZFhDYdFwL_Ks8EeWP78uL2NwyZgwtVKjtOWaZxaS_ScHHDUQdD5YMTJChOZCc81shEz9sdGBK2xPAmE7G30FpPGJw/img2375jpg.webp"
+                    alt="Área Gourmet">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDjlv5iJtTRoVRWPz_I98IydOy0-je2bs0qm-syhYr61-LViVb37KlCqiMVSmJpeQfAuzL2eubvDDnzjcPyq1wLJ0yJh17L1oX_HHU7H6GFuqcjtkkMuhmYTmVAIYz5nu3rhEhWZvJGxfNxUF0o5piUJxsGNRYPLC5/img2376jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDjlv5iJtTRoVRWPz_I98IydOy0-je2bs0qm-syhYr61-LViVb37KlCqiMVSmJpeQfAuzL2eubvDDnzjcPyq1wLJ0yJh17L1oX_HHU7H6GFuqcjtkkMuhmYTmVAIYz5nu3rhEhWZvJGxfNxUF0o5piUJxsGNRYPLC5/img2376jpg.webp" alt="Piscina Cascata">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDjlv5iJtTRoVRWPz_I98IydOy0-je2bs0qm-syhYr61-LViVb37KlCqiMVSmJpeQfAuzL2eubvDDnzjcPyq1wLJ0yJh17L1oX_HHU7H6GFuqcjtkkMuhmYTmVAIYz5nu3rhEhWZvJGxfNxUF0o5piUJxsGNRYPLC5/img2376jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDjlv5iJtTRoVRWPz_I98IydOy0-je2bs0qm-syhYr61-LViVb37KlCqiMVSmJpeQfAuzL2eubvDDnzjcPyq1wLJ0yJh17L1oX_HHU7H6GFuqcjtkkMuhmYTmVAIYz5nu3rhEhWZvJGxfNxUF0o5piUJxsGNRYPLC5/img2376jpg.webp"
+                    alt="Piscina Cascata">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19NrnzW8dE1Owo00PJubc2Vu30JhpTGniGghdnn4pzNZCQoswvlzxxnm62r2mW77HN3lj4yPN96RR4zh2xP7M-z-dYLrrl52xf8MOdENJ3Bc2AuOALEgc-KmYF01lhM2-W8VyEmiSVnamdJbn4Isr3vGFVO3bGNoBRg/img2380jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19NrnzW8dE1Owo00PJubc2Vu30JhpTGniGghdnn4pzNZCQoswvlzxxnm62r2mW77HN3lj4yPN96RR4zh2xP7M-z-dYLrrl52xf8MOdENJ3Bc2AuOALEgc-KmYF01lhM2-W8VyEmiSVnamdJbn4Isr3vGFVO3bGNoBRg/img2380jpg.webp" alt="Sala de Estar">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19NrnzW8dE1Owo00PJubc2Vu30JhpTGniGghdnn4pzNZCQoswvlzxxnm62r2mW77HN3lj4yPN96RR4zh2xP7M-z-dYLrrl52xf8MOdENJ3Bc2AuOALEgc-KmYF01lhM2-W8VyEmiSVnamdJbn4Isr3vGFVO3bGNoBRg/img2380jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRA8uL9l2ozsZ19NrnzW8dE1Owo00PJubc2Vu30JhpTGniGghdnn4pzNZCQoswvlzxxnm62r2mW77HN3lj4yPN96RR4zh2xP7M-z-dYLrrl52xf8MOdENJ3Bc2AuOALEgc-KmYF01lhM2-W8VyEmiSVnamdJbn4Isr3vGFVO3bGNoBRg/img2380jpg.webp"
+                    alt="Sala de Estar">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRJ8vL9l2owt5vRIDRiNE8Xt1PL5hQMWUuBetAqsg-yiewbX0qzcn23WvLwi5OHtafZm85gPGITw1rDUwYxe57arY9ARmgOELecZswNJFZPKBTfLHbJvRCvVTBau2OXJbPR4rMeP1iJPhZIDf9T_pEg-VCfYpgqqzoW9gfZKDH-cj4iBR/img2378jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRJ8vL9l2owt5vRIDRiNE8Xt1PL5hQMWUuBetAqsg-yiewbX0qzcn23WvLwi5OHtafZm85gPGITw1rDUwYxe57arY9ARmgOELecZswNJFZPKBTfLHbJvRCvVTBau2OXJbPR4rMeP1iJPhZIDf9T_pEg-VCfYpgqqzoW9gfZKDH-cj4iBR/img2378jpg.webp" alt="Suíte Master">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRJ8vL9l2owt5vRIDRiNE8Xt1PL5hQMWUuBetAqsg-yiewbX0qzcn23WvLwi5OHtafZm85gPGITw1rDUwYxe57arY9ARmgOELecZswNJFZPKBTfLHbJvRCvVTBau2OXJbPR4rMeP1iJPhZIDf9T_pEg-VCfYpgqqzoW9gfZKDH-cj4iBR/img2378jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRJ8vL9l2owt5vRIDRiNE8Xt1PL5hQMWUuBetAqsg-yiewbX0qzcn23WvLwi5OHtafZm85gPGITw1rDUwYxe57arY9ARmgOELecZswNJFZPKBTfLHbJvRCvVTBau2OXJbPR4rMeP1iJPhZIDf9T_pEg-VCfYpgqqzoW9gfZKDH-cj4iBR/img2378jpg.webp"
+                    alt="Suíte Master">
                 </div>
               </div>
             </div>
 
             <div class="property-details">
               <div>
-                <span class="property-condo-name"><i class="fas fa-map-marker-alt"></i> Terras Alphaville Cabo Frio</span>
+                <span class="property-condo-name"><i class="fas fa-map-marker-alt"></i> Terras Alphaville Cabo
+                  Frio</span>
                 <h3 class="property-title">Casa Nova e Moderna com 4 Suítes, Cascata & Terreno Amplo</h3>
                 <p class="property-pitch">
-                  Recém-construída em estilo minimalista contemporâneo! Piscina privativa com cascata e hidromassagem, espaço gourmet com churrasqueira moderna, terreno de quase 400 m² e 4 suítes arejadas.
+                  Recém-construída em estilo minimalista contemporâneo! Piscina privativa com cascata e hidromassagem,
+                  espaço gourmet com churrasqueira moderna, terreno de quase 400 m² e 4 suítes arejadas.
                 </p>
 
                 <div class="specs-grid">
@@ -877,8 +989,8 @@
                   <span class="price-value">R$ 2.300.000</span>
                   <span class="costs-meta">Condomínio: R$ 700/mês | IPTU: R$ 300/ano</span>
                 </div>
-                <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Terras%20Alphaville%20(C%C3%B3d:%20LCF101026)%20de%20R$%202.300.000.%20Gostaria%20de%20agendar%20uma%20visita%20e%20receber%20mais%20informa%C3%A7%C3%B5es." 
-                   class="btn-whatsapp-property" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Terras%20Alphaville%20(C%C3%B3d:%20LCF101026)%20de%20R$%202.300.000.%20Gostaria%20de%20agendar%20uma%20visita%20e%20receber%20mais%20informa%C3%A7%C3%B5es."
+                  class="btn-whatsapp-property" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-whatsapp"></i>
                   <span>Agendar Visita (Cód: LCF101026)</span>
                 </a>
@@ -895,38 +1007,56 @@
                 <span class="badge-status">Altíssimo Padrão</span>
               </div>
               <div class="main-image-container" onclick="openPropertyGallery('LCF090224')">
-                <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp" 
-                     alt="Mansão Terras Alphaville Cabo Frio LCF090224" class="main-property-img">
+                <img
+                  src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp"
+                  alt="Mansão Terras Alphaville Cabo Frio LCF090224" class="main-property-img">
                 <button class="view-gallery-btn" aria-label="Abrir galeria de fotos">
                   <i class="fas fa-images"></i>
                   <span>Ver 15 Fotos</span>
                 </button>
               </div>
               <div class="thumbnail-strip">
-                <div class="thumb-item active" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp" alt="Fachada Dupla">
+                <div class="thumb-item active"
+                  data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBSRbgea5_zDn0BsHubpy_fI7ozGniGgpdkB8w1bcNivnqox41ltqyygZ_uLP_MUTVIkSE_JHgjbdPf_gkm3ptUxjCx2DwnlS40twaIAuwf4RZcWEKBVTkARuoOgTJCjuqUQ34sL6P4apVJTwrKjnfp6iGPYiBsDE/img1803jpg.webp"
+                    alt="Fachada Dupla">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBUzx-PUY6COYUhoZubpyvvI7ozGniGgpdkB8g1bc9ivnoIxo1ltq-ygZ_uLPFLkshgiMMUYZ5gVZPv_jkm3ptXxjCz1XlkkpzU9wYoA-0e7ONgdXxjdWkARuoOgTJCgOCQjlox9VY2A7tpzn-LNseomZGb-8MF-c/img1804jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBUzx-PUY6COYUhoZubpyvvI7ozGniGgpdkB8g1bc9ivnoIxo1ltq-ygZ_uLPFLkshgiMMUYZ5gVZPv_jkm3ptXxjCz1XlkkpzU9wYoA-0e7ONgdXxjdWkARuoOgTJCgOCQjlox9VY2A7tpzn-LNseomZGb-8MF-c/img1804jpg.webp" alt="Fachada Noturna">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBUzx-PUY6COYUhoZubpyvvI7ozGniGgpdkB8g1bc9ivnoIxo1ltq-ygZ_uLPFLkshgiMMUYZ5gVZPv_jkm3ptXxjCz1XlkkpzU9wYoA-0e7ONgdXxjdWkARuoOgTJCgOCQjlox9VY2A7tpzn-LNseomZGb-8MF-c/img1804jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19NrBUzx-PUY6COYUhoZubpyvvI7ozGniGgpdkB8g1bc9ivnoIxo1ltq-ygZ_uLPFLkshgiMMUYZ5gVZPv_jkm3ptXxjCz1XlkkpzU9wYoA-0e7ONgdXxjdWkARuoOgTJCgOCQjlox9VY2A7tpzn-LNseomZGb-8MF-c/img1804jpg.webp"
+                    alt="Fachada Noturna">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvnv-uHXc8sTdxmAhUY6xAOB17XGvS4ERYRPJ3dabSAY1QMlt1p9qy-zHHeLbWFztzcTRM5JYhjbdPf_IGaxyUBhQkGn4Q-xbA9bFzT1P7xq-rseAYQWc-IQAAkS288i_6vcQE5RS-_b9VpIhnni2CsC2gk_D0XU/8fb67236-a858-448d-8fc3-057a8a977e1bjpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvnv-uHXc8sTdxmAhUY6xAOB17XGvS4ERYRPJ3dabSAY1QMlt1p9qy-zHHeLbWFztzcTRM5JYhjbdPf_IGaxyUBhQkGn4Q-xbA9bFzT1P7xq-rseAYQWc-IQAAkS288i_6vcQE5RS-_b9VpIhnni2CsC2gk_D0XU/8fb67236-a858-448d-8fc3-057a8a977e1bjpg.webp" alt="Living">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvnv-uHXc8sTdxmAhUY6xAOB17XGvS4ERYRPJ3dabSAY1QMlt1p9qy-zHHeLbWFztzcTRM5JYhjbdPf_IGaxyUBhQkGn4Q-xbA9bFzT1P7xq-rseAYQWc-IQAAkS288i_6vcQE5RS-_b9VpIhnni2CsC2gk_D0XU/8fb67236-a858-448d-8fc3-057a8a977e1bjpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvnv-uHXc8sTdxmAhUY6xAOB17XGvS4ERYRPJ3dabSAY1QMlt1p9qy-zHHeLbWFztzcTRM5JYhjbdPf_IGaxyUBhQkGn4Q-xbA9bFzT1P7xq-rseAYQWc-IQAAkS288i_6vcQE5RS-_b9VpIhnni2CsC2gk_D0XU/8fb67236-a858-448d-8fc3-057a8a977e1bjpg.webp"
+                    alt="Living">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvn8vLLLqpw1ACZtrM0vXAquw7lm_zVJwT7eT0VrCTWBAk9URfiwAyxerc4m0QcoRPA2NF5qpz52F4AzXyoW1qK9WQEY-9b4W_DTVfKx-Ges8mbEMh-SEeBpFWjK-EmGL6Bb3RI77PQ1RSH5BRcH2IIGOGNRI1iKd/img1767jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvn8vLLLqpw1ACZtrM0vXAquw7lm_zVJwT7eT0VrCTWBAk9URfiwAyxerc4m0QcoRPA2NF5qpz52F4AzXyoW1qK9WQEY-9b4W_DTVfKx-Ges8mbEMh-SEeBpFWjK-EmGL6Bb3RI77PQ1RSH5BRcH2IIGOGNRI1iKd/img1767jpg.webp" alt="Piscina">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvn8vLLLqpw1ACZtrM0vXAquw7lm_zVJwT7eT0VrCTWBAk9URfiwAyxerc4m0QcoRPA2NF5qpz52F4AzXyoW1qK9WQEY-9b4W_DTVfKx-Ges8mbEMh-SEeBpFWjK-EmGL6Bb3RI77PQ1RSH5BRcH2IIGOGNRI1iKd/img1767jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRI8vL9l6oztxvRIDvn8vLLLqpw1ACZtrM0vXAquw7lm_zVJwT7eT0VrCTWBAk9URfiwAyxerc4m0QcoRPA2NF5qpz52F4AzXyoW1qK9WQEY-9b4W_DTVfKx-Ges8mbEMh-SEeBpFWjK-EmGL6Bb3RI77PQ1RSH5BRcH2IIGOGNRI1iKd/img1767jpg.webp"
+                    alt="Piscina">
                 </div>
-                <div class="thumb-item" data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19Nr5TBU4U5XQ28HPJdbcEtXZ3rzhaje2bu0qn-sStszPie_Iea-X1ss98PG3awkIiUw4hhYfSXIGDd05UzxMotVO0xsJkNclFuMZTS8skK7xiTlx3GRJZy7MPN1rj9iD07PUH2NRG5fd1YhdFRxFQXzjPT0XyYKuwWiSQ/img1740jpg.webp">
-                  <img src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19Nr5TBU4U5XQ28HPJdbcEtXZ3rzhaje2bu0qn-sStszPie_Iea-X1ss98PG3awkIiUw4hhYfSXIGDd05UzxMotVO0xsJkNclFuMZTS8skK7xiTlx3GRJZy7MPN1rj9iD07PUH2NRG5fd1YhdFRxFQXzjPT0XyYKuwWiSQ/img1740jpg.webp" alt="Cozinha Gourmet">
+                <div class="thumb-item"
+                  data-full="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19Nr5TBU4U5XQ28HPJdbcEtXZ3rzhaje2bu0qn-sStszPie_Iea-X1ss98PG3awkIiUw4hhYfSXIGDd05UzxMotVO0xsJkNclFuMZTS8skK7xiTlx3GRJZy7MPN1rj9iD07PUH2NRG5fd1YhdFRxFQXzjPT0XyYKuwWiSQ/img1740jpg.webp">
+                  <img
+                    src="https://s01.jetimgs.com/tnkmRAMuL9l6ozsZ19Nr5TBU4U5XQ28HPJdbcEtXZ3rzhaje2bu0qn-sStszPie_Iea-X1ss98PG3awkIiUw4hhYfSXIGDd05UzxMotVO0xsJkNclFuMZTS8skK7xiTlx3GRJZy7MPN1rj9iD07PUH2NRG5fd1YhdFRxFQXzjPT0XyYKuwWiSQ/img1740jpg.webp"
+                    alt="Cozinha Gourmet">
                 </div>
               </div>
             </div>
 
             <div class="property-details">
               <div>
-                <span class="property-condo-name"><i class="fas fa-map-marker-alt"></i> Terras Alphaville Cabo Frio</span>
+                <span class="property-condo-name"><i class="fas fa-map-marker-alt"></i> Terras Alphaville Cabo
+                  Frio</span>
                 <h3 class="property-title">Magnífica Mansão Contemporânea de 350 m² com 4 Suítes</h3>
                 <p class="property-pitch">
-                  Uma obra-prima arquitetônica com pé-direito duplo espetacular. 4 amplas suítes plenas, lazer privativo com piscina, prainha e deck molhado, cozinha gourmet em ilha e acabamentos de altíssimo padrão.
+                  Uma obra-prima arquitetônica com pé-direito duplo espetacular. 4 amplas suítes plenas, lazer privativo
+                  com piscina, prainha e deck molhado, cozinha gourmet em ilha e acabamentos de altíssimo padrão.
                 </p>
 
                 <div class="specs-grid">
@@ -969,11 +1099,11 @@
               <div class="property-action-footer">
                 <div class="price-box">
                   <span class="price-label">Valor de Venda</span>
-                  <span class="price-value">R$ 2.700.000</span>
+                  <span class="price-value">R$ 2.500.000</span>
                   <span class="costs-meta">Condomínio: R$ 700/mês | IPTU: R$ 300/ano</span>
                 </div>
-                <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Terras%20Alphaville%20(C%C3%B3d:%20LCF090224)%20de%20R$%202.700.000.%20Gostaria%20de%20agendar%20uma%20visita%20e%20receber%20mais%20informa%C3%A7%C3%B5es." 
-                   class="btn-whatsapp-property" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Terras%20Alphaville%20(C%C3%B3d:%20LCF090224)%20de%20R$%202.500.000.%20Gostaria%20de%20agendar%20uma%20visita%20e%20receber%20mais%20informa%C3%A7%C3%B5es."
+                  class="btn-whatsapp-property" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-whatsapp"></i>
                   <span>Agendar Visita (Cód: LCF090224)</span>
                 </a>
@@ -1024,8 +1154,8 @@
                 <td>Porteira Fechada (Mobiliada) + Adega</td>
                 <td>R$ 580 / R$ 300</td>
                 <td>
-                  <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Quero%20visitar%20o%20im%C3%B3vel%20LCF110525." 
-                     class="badge badge-emerald" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Quero%20visitar%20o%20im%C3%B3vel%20LCF110525."
+                    class="badge badge-emerald" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i> Conversar
                   </a>
                 </td>
@@ -1039,23 +1169,23 @@
                 <td>Casa Nova + Cascata/Hidro + Terreno 397m²</td>
                 <td>R$ 700 / R$ 300</td>
                 <td>
-                  <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Quero%20visitar%20o%20im%C3%B3vel%20LCF101026." 
-                     class="badge badge-emerald" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Quero%20visitar%20o%20im%C3%B3vel%20LCF101026."
+                    class="badge badge-emerald" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i> Conversar
                   </a>
                 </td>
               </tr>
               <tr>
                 <td><span class="code-tag">LCF090224</span></td>
-                <td class="price-col">R$ 2.700.000</td>
+                <td class="price-col">R$ 2.500.000</td>
                 <td>350 m²</td>
                 <td>360 m²</td>
                 <td>4 Suítes Plenas</td>
                 <td>Pé-direito duplo + 350m² + 6 banheiros</td>
                 <td>R$ 700 / R$ 300</td>
                 <td>
-                  <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Quero%20visitar%20o%20im%C3%B3vel%20LCF090224." 
-                     class="badge badge-emerald" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Quero%20visitar%20o%20im%C3%B3vel%20LCF090224."
+                    class="badge badge-emerald" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i> Conversar
                   </a>
                 </td>
@@ -1073,17 +1203,20 @@
       <div class="container">
         <div class="section-header">
           <div class="club-brand-emblem-wrap">
-            <img src="assets/alphaville-logo-square.png" alt="Terras Alphaville Cabo Frio" class="club-alphaville-square-logo">
+            <img src="assets/alphaville-logo-square.png" alt="Terras Alphaville Cabo Frio"
+              class="club-alphaville-square-logo">
           </div>
           <span class="badge"><i class="fas fa-trophy"></i> Estrutura Alphaville</span>
           <h2>Um Clube Resort Particular à Sua <span class="gradient-text">Disposição Diária</span></h2>
-          <p class="subtitle">Fotos reais do clube Alphaville Cabo Frio: piscina semi-olímpica, complexo de quadras de tênis e beach tennis, academia de ponta e muito verde.</p>
+          <p class="subtitle">Fotos reais do clube Alphaville Cabo Frio: piscina semi-olímpica, complexo de quadras de
+            tênis e beach tennis, academia de ponta e muito verde.</p>
         </div>
 
         <div class="club-gallery-grid">
           <!-- Foto 1 da pasta -->
           <div class="club-photo-item span-6" onclick="openClubGallery(0)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_082858.jpg.jpeg" alt="Clube Alphaville Cabo Frio Piscina" class="club-photo-img">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_082858.jpg.jpeg" alt="Clube Alphaville Cabo Frio Piscina"
+              class="club-photo-img">
             <div class="club-photo-caption">
               <h4>Complexo Aquático com Piscina Semi-Olímpica</h4>
               <span>Solarium integrado e piscina infantil para toda a família</span>
@@ -1092,7 +1225,8 @@
 
           <!-- Foto 2 da pasta -->
           <div class="club-photo-item span-6" onclick="openClubGallery(1)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_082943.jpg.jpeg" alt="Área de Lazer e Espaço Gourmet Clube Alphaville" class="club-photo-img">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_082943.jpg.jpeg"
+              alt="Área de Lazer e Espaço Gourmet Clube Alphaville" class="club-photo-img">
             <div class="club-photo-caption">
               <h4>Sede Social e Espaços de Convivência</h4>
               <span>Salão de festas privativo, quiosques com churrasqueira e lounge</span>
@@ -1101,7 +1235,8 @@
 
           <!-- Foto 3 da pasta -->
           <div class="club-photo-item span-4" onclick="openClubGallery(2)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083222.jpg.jpeg" alt="Quadras Esportivas Clube Alphaville" class="club-photo-img">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083222.jpg.jpeg" alt="Quadras Esportivas Clube Alphaville"
+              class="club-photo-img">
             <div class="club-photo-caption">
               <h4>Quadras de Tênis & Beach Tennis</h4>
               <span>Iluminação profissional para jogos noturnos</span>
@@ -1110,7 +1245,8 @@
 
           <!-- Foto 4 da pasta -->
           <div class="club-photo-item span-4" onclick="openClubGallery(3)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083243.jpg.jpeg" alt="Campo de Futebol Society Alphaville" class="club-photo-img">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083243.jpg.jpeg" alt="Campo de Futebol Society Alphaville"
+              class="club-photo-img">
             <div class="club-photo-caption">
               <h4>Campo de Futebol & Poliesportiva</h4>
               <span>Aulas esportivas e escolinha para as crianças</span>
@@ -1119,7 +1255,8 @@
 
           <!-- Foto 5 da pasta -->
           <div class="club-photo-item span-4" onclick="openClubGallery(4)">
-            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083650.jpg.jpeg" alt="Academia e Paisagismo Alphaville Cabo Frio" class="club-photo-img">
+            <img src="ALPHAVILLE%20LA%20CORTE/20230609_083650.jpg.jpeg" alt="Academia e Paisagismo Alphaville Cabo Frio"
+              class="club-photo-img">
             <div class="club-photo-caption">
               <h4>Academia Climatizada & Saunas</h4>
               <span>Equipamentos modernos para seu treino diário sem sair de casa</span>
@@ -1132,25 +1269,29 @@
           <div class="club-feature-card">
             <div class="club-feature-icon"><i class="fas fa-swimmer"></i></div>
             <h4>Parque Aquático</h4>
-            <p>Piscina semi-olímpica para treinos, piscina infantil segura e deck molhado com hidromassagem relaxante.</p>
+            <p>Piscina semi-olímpica para treinos, piscina infantil segura e deck molhado com hidromassagem relaxante.
+            </p>
           </div>
 
           <div class="club-feature-card">
             <div class="club-feature-icon"><i class="fas fa-dumbbell"></i></div>
             <h4>Fitness Center Completo</h4>
-            <p>Academia moderna com esteiras, elípticos, musculação de alta tecnologia e vestiários com sauna seca e a vapor.</p>
+            <p>Academia moderna com esteiras, elípticos, musculação de alta tecnologia e vestiários com sauna seca e a
+              vapor.</p>
           </div>
 
           <div class="club-feature-card">
             <div class="club-feature-icon"><i class="fas fa-table-tennis"></i></div>
             <h4>Complexo Esportivo</h4>
-            <p>Quadra de tênis de saibro/rápida, quadras de beach tennis, campo de futebol society e quadra poliesportiva coberta.</p>
+            <p>Quadra de tênis de saibro/rápida, quadras de beach tennis, campo de futebol society e quadra
+              poliesportiva coberta.</p>
           </div>
 
           <div class="club-feature-card">
             <div class="club-feature-icon"><i class="fas fa-child"></i></div>
             <h4>Liberdade para os Filhos</h4>
-            <p>Aulas de natação e futebol dentro do condomínio. Espaço kids, playground arborizado e segurança armada 24 horas.</p>
+            <p>Aulas de natação e futebol dentro do condomínio. Espaço kids, playground arborizado e segurança armada 24
+              horas.</p>
           </div>
         </div>
       </div>
@@ -1164,7 +1305,8 @@
         <div class="section-header">
           <span class="badge"><i class="fas fa-video"></i> Tour Virtual Exclusivo</span>
           <h2>Vídeos Reais — <span class="gradient-text">Condomínio &amp; Região</span></h2>
-          <p class="subtitle">Assista às filmagens reais do Terras Alphaville e dos pontos turísticos mais deslumbrantes de Cabo Frio, praias, lagoas paradisíacas e a vida náutica privilegiada a 2 minutos de Búzios.</p>
+          <p class="subtitle">Assista às filmagens reais do Terras Alphaville e dos pontos turísticos mais deslumbrantes
+            de Cabo Frio, praias, lagoas paradisíacas e a vida náutica privilegiada a 2 minutos de Búzios.</p>
         </div>
 
         <div class="videos-grid">
@@ -1178,8 +1320,11 @@
             </div>
             <div class="video-info-box">
               <h3>Mergulho com Tubões e Raias — Vida Marinha de Cabo Frio</h3>
-              <p>As águas do Atlântico ao redor de Cabo Frio abrigam uma fauna marinha única. Mergulhe entre tubões, raias, cardumes e corais — uma das experiências de mergulho mais impressionantes do litoral fluminense, a poucos minutos do condomínio.</p>
-              <button class="btn-open-video" onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/6A457675-804A-4714-9BED-57DDEF34AAC3.MP4')">
+              <p>As águas do Atlântico ao redor de Cabo Frio abrigam uma fauna marinha única. Mergulhe entre tubões,
+                raias, cardumes e corais — uma das experiências de mergulho mais impressionantes do litoral fluminense,
+                a poucos minutos do condomínio.</p>
+              <button class="btn-open-video"
+                onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/6A457675-804A-4714-9BED-57DDEF34AAC3.MP4')">
                 <i class="fas fa-expand"></i> Assistir em Tela Cheia
               </button>
             </div>
@@ -1195,8 +1340,11 @@
             </div>
             <div class="video-info-box">
               <h3>Bares e Restaurantes Búzios — Gastronomia Sob as Estrelas</h3>
-              <p>Coqueiros, mesas na areia e pôr do sol dourado sobre o mar. Búzios é mundialmente famoso pela vida noturna, bares beira-mar, restaurantes premiados e o charme único que atrai celebridades do mundo inteiro — a 2 minutos do Terras Alphaville.</p>
-              <button class="btn-open-video" onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/49ABAD3B-FF8A-40A7-9DCC-087C26FCD339.MP4')">
+              <p>Coqueiros, mesas na areia e pôr do sol dourado sobre o mar. Búzios é mundialmente famoso pela vida
+                noturna, bares beira-mar, restaurantes premiados e o charme único que atrai celebridades do mundo
+                inteiro — a 2 minutos do Terras Alphaville.</p>
+              <button class="btn-open-video"
+                onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/49ABAD3B-FF8A-40A7-9DCC-087C26FCD339.MP4')">
                 <i class="fas fa-expand"></i> Assistir em Tela Cheia
               </button>
             </div>
@@ -1212,8 +1360,11 @@
             </div>
             <div class="video-info-box">
               <h3>Tartaruga Marinha — Biodiversidade Única no Litoral Fluminense</h3>
-              <p>Tartarugas marinhas nadam livremente nas águas cristalinas ao redor de Cabo Frio e Arraial do Cabo. Um espetáculo da natureza que encanta moradores e visitantes — parte da biodiversidade preservada que torna essa região ainda mais especial para se viver.</p>
-              <button class="btn-open-video" onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/BB6C4C43-35F0-4764-A23F-E1C3B7086420.MP4')">
+              <p>Tartarugas marinhas nadam livremente nas águas cristalinas ao redor de Cabo Frio e Arraial do Cabo. Um
+                espetáculo da natureza que encanta moradores e visitantes — parte da biodiversidade preservada que torna
+                essa região ainda mais especial para se viver.</p>
+              <button class="btn-open-video"
+                onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/BB6C4C43-35F0-4764-A23F-E1C3B7086420.MP4')">
                 <i class="fas fa-expand"></i> Assistir em Tela Cheia
               </button>
             </div>
@@ -1229,8 +1380,11 @@
             </div>
             <div class="video-info-box">
               <h3>Pôr do Sol na Lagoa de Araruama — Espetáculo Diário</h3>
-              <p>A maior lagoa hipersalina do mundo fica a minutos do condomínio. Barcos ao entardecer, águas turquesa e um pôr do sol dourado que transforma cada tarde em experiência inesquecível ao lado de Cabo Frio e Búzios.</p>
-              <button class="btn-open-video" onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/7C77DE9F-2CFA-4BD8-9607-5FC1B1188C31.MP4')">
+              <p>A maior lagoa hipersalina do mundo fica a minutos do condomínio. Barcos ao entardecer, águas turquesa e
+                um pôr do sol dourado que transforma cada tarde em experiência inesquecível ao lado de Cabo Frio e
+                Búzios.</p>
+              <button class="btn-open-video"
+                onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/7C77DE9F-2CFA-4BD8-9607-5FC1B1188C31.MP4')">
                 <i class="fas fa-expand"></i> Assistir em Tela Cheia
               </button>
             </div>
@@ -1246,8 +1400,10 @@
             </div>
             <div class="video-info-box">
               <h3>Golfe &amp; Esportes Premium na Região</h3>
-              <p>Campos de golfe com fairways impecáveis no entorno de Cabo Frio e Búzios. Além do golfe, a região oferece beach tennis, kitesurf, mergulho e uma agenda esportiva de alto nível o ano inteiro.</p>
-              <button class="btn-open-video" onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/CABB7949-A03E-475B-8C1F-AFE27481C30F.MP4')">
+              <p>Campos de golfe com fairways impecáveis no entorno de Cabo Frio e Búzios. Além do golfe, a região
+                oferece beach tennis, kitesurf, mergulho e uma agenda esportiva de alto nível o ano inteiro.</p>
+              <button class="btn-open-video"
+                onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/CABB7949-A03E-475B-8C1F-AFE27481C30F.MP4')">
                 <i class="fas fa-expand"></i> Assistir em Tela Cheia
               </button>
             </div>
@@ -1263,8 +1419,11 @@
             </div>
             <div class="video-info-box">
               <h3>Búzios &amp; Vida Náutica — 2 Minutos do Condomínio</h3>
-              <p>Pôr do sol dourado sobre o Atlântico, veleiros ao vento e ilhas paradisíacas ao horizonte. Búzios é referência mundial em glamour, praias secretas e gastronomia — e está a apenas 2 minutos da portaria do Terras Alphaville.</p>
-              <button class="btn-open-video" onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/5EE60FBC-B878-46EE-95D3-DDE40958B832.MP4')">
+              <p>Pôr do sol dourado sobre o Atlântico, veleiros ao vento e ilhas paradisíacas ao horizonte. Búzios é
+                referência mundial em glamour, praias secretas e gastronomia — e está a apenas 2 minutos da portaria do
+                Terras Alphaville.</p>
+              <button class="btn-open-video"
+                onclick="playVideoModal('ALPHAVILLE%20LA%20CORTE/5EE60FBC-B878-46EE-95D3-DDE40958B832.MP4')">
                 <i class="fas fa-expand"></i> Assistir em Tela Cheia
               </button>
             </div>
@@ -1283,7 +1442,9 @@
             <span class="badge"><i class="fas fa-heart"></i> O Sentido de Viver Bem</span>
             <h2>Liberdade para os Seus Filhos e <span class="gradient-text">Paz para Você</span></h2>
             <p style="color: var(--text-light); font-size: 1.1rem; line-height: 1.6;">
-              O briefing de quem escolhe o Terras Alphaville é claro: fugir da rotina estressante e da violência das grandes cidades para proporcionar aos filhos uma infância dourada, segura e livre, sem abrir mão do conforto e do luxo.
+              O briefing de quem escolhe o Terras Alphaville é claro: fugir da rotina estressante e da violência das
+              grandes cidades para proporcionar aos filhos uma infância dourada, segura e livre, sem abrir mão do
+              conforto e do luxo.
             </p>
 
             <div class="lifestyle-bullets">
@@ -1291,7 +1452,8 @@
                 <div class="lifestyle-bullet-icon"><i class="fas fa-biking"></i></div>
                 <div class="lifestyle-bullet-text">
                   <h4>Crianças Livres na Rua com Segurança Armada</h4>
-                  <p>Aqui seus filhos podem andar de bicicleta, jogar bola na rua e brincar com amigos em total tranquilidade, monitorados por ronda 24h e portaria blindada.</p>
+                  <p>Aqui seus filhos podem andar de bicicleta, jogar bola na rua e brincar com amigos em total
+                    tranquilidade, monitorados por ronda 24h e portaria blindada.</p>
                 </div>
               </div>
 
@@ -1299,7 +1461,9 @@
                 <div class="lifestyle-bullet-icon"><i class="fas fa-users"></i></div>
                 <div class="lifestyle-bullet-text">
                   <h4>Comunidade Ativa (Não é um "Condomínio Fantasma")</h4>
-                  <p>Diferente de bairros e condomínios de Búzios que ficam desertos na baixa temporada, o Terras Alphaville possui excelente taxa de moradores fixos, criando uma vida social vibrante e vizinhança qualificada o ano todo.</p>
+                  <p>Diferente de bairros e condomínios de Búzios que ficam desertos na baixa temporada, o Terras
+                    Alphaville possui excelente taxa de moradores fixos, criando uma vida social vibrante e vizinhança
+                    qualificada o ano todo.</p>
                 </div>
               </div>
 
@@ -1307,7 +1471,8 @@
                 <div class="lifestyle-bullet-icon"><i class="fas fa-truck"></i></div>
                 <div class="lifestyle-bullet-text">
                   <h4>Conveniência & Entregas na Sua Porta</h4>
-                  <p>Os principais mercados, hortifrutis, padarias artesanais e farmácias da região realizam entrega delivery direta na sua residência com rapidez e comodidade.</p>
+                  <p>Os principais mercados, hortifrutis, padarias artesanais e farmácias da região realizam entrega
+                    delivery direta na sua residência com rapidez e comodidade.</p>
                 </div>
               </div>
             </div>
@@ -1316,7 +1481,9 @@
           <div class="lifestyle-card-box">
             <span class="quote-badge">“</span>
             <p class="quote-box">
-              "Trocar a capital pelo Terras Alphaville Cabo Frio foi a melhor decisão da nossa vida. Nossos filhos praticam esportes todos os dias dentro do condomínio, dormimos de janela aberta com o som dos pássaros e estamos a 10 minutos de praias de cinema e a 2 minutos dos melhores restaurantes de Búzios."
+              "Trocar a capital pelo Terras Alphaville Cabo Frio foi a melhor decisão da nossa vida. Nossos filhos
+              praticam esportes todos os dias dentro do condomínio, dormimos de janela aberta com o som dos pássaros e
+              estamos a 10 minutos de praias de cinema e a 2 minutos dos melhores restaurantes de Búzios."
             </p>
             <div class="quote-author">
               <strong>Família Residente no Terras Alphaville</strong>
@@ -1326,7 +1493,8 @@
             <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
               <span class="badge badge-emerald"><i class="fas fa-chart-line"></i> Valorização Contínua</span>
               <p style="font-size: 0.875rem; color: var(--text-muted); margin-top: 0.75rem;">
-                Com a escassez de lotes e o padrão cada vez mais alto das novas construções, o Terras Alphaville é hoje um dos investimentos imobiliários mais sólidos e rentáveis de todo o estado do Rio de Janeiro.
+                Com a escassez de lotes e o padrão cada vez mais alto das novas construções, o Terras Alphaville é hoje
+                um dos investimentos imobiliários mais sólidos e rentáveis de todo o estado do Rio de Janeiro.
               </p>
             </div>
           </div>
@@ -1342,7 +1510,8 @@
         <div class="section-header">
           <span class="badge"><i class="fas fa-compass"></i> A Cidade dos Sonhos</span>
           <h2>Cabo Frio: Mar Cristalino, <span class="gradient-text">Gastronomia & Charme Náutico</span></h2>
-          <p class="subtitle">Conhecida como o Caribe Brasileiro, a cidade combina belezas naturais incomparáveis, polo gastronômico histórico e acesso imediato a Búzios e Arraial do Cabo.</p>
+          <p class="subtitle">Conhecida como o Caribe Brasileiro, a cidade combina belezas naturais incomparáveis, polo
+            gastronômico histórico e acesso imediato a Búzios e Arraial do Cabo.</p>
         </div>
 
         <div class="attractions-grid">
@@ -1350,11 +1519,13 @@
           <div class="attraction-card">
             <div class="attraction-img-box">
               <span class="attraction-tag">Ícone Mundial</span>
-              <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80" alt="Praia do Forte Cabo Frio">
+              <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=800&q=80"
+                alt="Praia do Forte Cabo Frio">
             </div>
             <div class="attraction-info">
               <h3>Praia do Forte & Forte São Mateus</h3>
-              <p>7,5 km de areia alva e finíssima que não queima os pés, água azul-turquesa transparente e a histórica fortaleza do século XVII emoldurando a paisagem.</p>
+              <p>7,5 km de areia alva e finíssima que não queima os pés, água azul-turquesa transparente e a histórica
+                fortaleza do século XVII emoldurando a paisagem.</p>
               <div class="attraction-distance">
                 <i class="fas fa-car"></i> A 15 minutos do Terras Alphaville
               </div>
@@ -1365,11 +1536,13 @@
           <div class="attraction-card">
             <div class="attraction-img-box">
               <span class="attraction-tag">Piscina Natural</span>
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Ilha do Japonês Cabo Frio">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+                alt="Ilha do Japonês Cabo Frio">
             </div>
             <div class="attraction-info">
               <h3>Ilha do Japonês & Praia das Conchas</h3>
-              <p>Águas rasas, calmas e mornas, perfeitas para crianças e prática de stand-up paddle. Paisagem intocada cercada por restinga preservada e gastronomia praiana fresca.</p>
+              <p>Águas rasas, calmas e mornas, perfeitas para crianças e prática de stand-up paddle. Paisagem intocada
+                cercada por restinga preservada e gastronomia praiana fresca.</p>
               <div class="attraction-distance">
                 <i class="fas fa-car"></i> A 5 minutos do condomínio
               </div>
@@ -1380,11 +1553,13 @@
           <div class="attraction-card">
             <div class="attraction-img-box">
               <span class="attraction-tag">Polo Gastronômico</span>
-              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Bairro da Passagem Gastronomia Cabo Frio">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80"
+                alt="Bairro da Passagem Gastronomia Cabo Frio">
             </div>
             <div class="attraction-info">
               <h3>Bairro da Passagem & Polo Náutico</h3>
-              <p>O centro histórico mais charmoso da região com casario colonial português preservado, bistrôs premiados, vinhos, frutos do mar nobres e marinas de iates e lanchas.</p>
+              <p>O centro histórico mais charmoso da região com casario colonial português preservado, bistrôs
+                premiados, vinhos, frutos do mar nobres e marinas de iates e lanchas.</p>
               <div class="attraction-distance">
                 <i class="fas fa-car"></i> A 10 minutos do condomínio
               </div>
@@ -1395,11 +1570,13 @@
           <div class="attraction-card">
             <div class="attraction-img-box">
               <span class="attraction-tag">Vizinha de Fronteira</span>
-              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Armação dos Búzios">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+                alt="Armação dos Búzios">
             </div>
             <div class="attraction-info">
               <h3>Armação dos Búzios & Rua das Pedras</h3>
-              <p>O Terras Alphaville fica colado na divisa de Búzios! Desfrute de Geribá, Ferradura, alta gastronomia francesa e italiana, boutiques internacionais e vida noturna sofisticada.</p>
+              <p>O Terras Alphaville fica colado na divisa de Búzios! Desfrute de Geribá, Ferradura, alta gastronomia
+                francesa e italiana, boutiques internacionais e vida noturna sofisticada.</p>
               <div class="attraction-distance">
                 <i class="fas fa-car"></i> Apenas 2 minutos da entrada de Búzios
               </div>
@@ -1410,11 +1587,13 @@
           <div class="attraction-card">
             <div class="attraction-img-box">
               <span class="attraction-tag">Bandeira Azul</span>
-              <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80" alt="Praia do Peró Bandeira Azul">
+              <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80"
+                alt="Praia do Peró Bandeira Azul">
             </div>
             <div class="attraction-info">
               <h3>Praia do Peró & Dunas do Peró</h3>
-              <p>Certificação internacional de pureza ambiental Bandeira Azul. Orla revitalizada com quiosques gastronômicos, ondas perfeitas e as lendárias dunas de areia branca.</p>
+              <p>Certificação internacional de pureza ambiental Bandeira Azul. Orla revitalizada com quiosques
+                gastronômicos, ondas perfeitas e as lendárias dunas de areia branca.</p>
               <div class="attraction-distance">
                 <i class="fas fa-car"></i> A 5 minutos do condomínio
               </div>
@@ -1425,11 +1604,13 @@
           <div class="attraction-card">
             <div class="attraction-img-box">
               <span class="attraction-tag">Capital do Mergulho</span>
-              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Arraial do Cabo Mergulho">
+              <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80"
+                alt="Arraial do Cabo Mergulho">
             </div>
             <div class="attraction-info">
               <h3>Arraial do Cabo & Ilha do Farol</h3>
-              <p>Considerada a capital nacional do mergulho ecológico. Grutas subaquáticas, corais coloridos, tartarugas marinhas e águas com visibilidade cinematográfica.</p>
+              <p>Considerada a capital nacional do mergulho ecológico. Grutas subaquáticas, corais coloridos, tartarugas
+                marinhas e águas com visibilidade cinematográfica.</p>
               <div class="attraction-distance">
                 <i class="fas fa-car"></i> A 25 minutos do condomínio
               </div>
@@ -1449,7 +1630,9 @@
             <span class="badge badge-blue"><i class="fas fa-plane"></i> Logística VIP Incomparável</span>
             <h2>Aeroporto Internacional de Cabo Frio: <span class="gradient-text">Sua Ponte Aérea Direta</span></h2>
             <p>
-              Diga adeus a horas presas no trânsito das rodovias e serras. Cabo Frio conta com o <strong>Aeroporto Internacional de Cabo Frio (CFB)</strong>, um dos principais hubs aeroportuários do país para aviação comercial e executiva de luxo.
+              Diga adeus a horas presas no trânsito das rodovias e serras. Cabo Frio conta com o <strong>Aeroporto
+                Internacional de Cabo Frio (CFB)</strong>, um dos principais hubs aeroportuários do país para aviação
+              comercial e executiva de luxo.
             </p>
 
             <div class="airport-features-list">
@@ -1473,7 +1656,8 @@
                 <div class="airport-icon"><i class="fas fa-stopwatch"></i></div>
                 <div>
                   <strong>A Menos de 1 Hora de Voo de SP, BH e RJ</strong>
-                  <span>Chegue na sua casa de praia para o fim de semana em minutos ou trabalhe remotamente com conexão rápida.</span>
+                  <span>Chegue na sua casa de praia para o fim de semana em minutos ou trabalhe remotamente com conexão
+                    rápida.</span>
                 </div>
               </div>
             </div>
@@ -1484,9 +1668,10 @@
               CFB
               <span>Cabo Frio International Airport</span>
             </div>
-            
+
             <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
-              Localizado a apenas 25 minutos do Terras Alphaville, permitindo que proprietários de aeronaves e passageiros executivos acessem sua casa de praia com máxima conveniência.
+              Localizado a apenas 25 minutos do Terras Alphaville, permitindo que proprietários de aeronaves e
+              passageiros executivos acessem sua casa de praia com máxima conveniência.
             </p>
 
             <div class="airport-routes-grid">
@@ -1508,8 +1693,9 @@
               </div>
             </div>
 
-            <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20log%C3%ADstica%20de%20chegada%20e%20casas%20no%20Terras%20Alphaville%20Cabo%20Frio." 
-               class="btn-whatsapp-property" style="width: 100%; justify-content: center;" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20log%C3%ADstica%20de%20chegada%20e%20casas%20no%20Terras%20Alphaville%20Cabo%20Frio."
+              class="btn-whatsapp-property" style="width: 100%; justify-content: center;" target="_blank"
+              rel="noopener noreferrer">
               <i class="fab fa-whatsapp"></i>
               <span>Consultar Logística com Especialista</span>
             </a>
@@ -1527,7 +1713,9 @@
           <span class="badge badge-emerald"><i class="fab fa-whatsapp"></i> Atendimento Direto & Sem Burocracia</span>
           <h2>Fale Diretamente no <span class="gradient-text">WhatsApp</span></h2>
           <p class="contact-lead">
-            Não criamos formulários demorados. Na <strong>La Côrte Imóveis</strong> você conversa diretamente com corretores e consultores especializados no Terras Alphaville. Clique no canal desejado abaixo e receba atendimento imediato:
+            Não criamos formulários demorados. Na <strong>La Côrte Imóveis</strong> você conversa diretamente com
+            corretores e consultores especializados no Terras Alphaville. Clique no canal desejado abaixo e receba
+            atendimento imediato:
           </p>
 
           <div class="whatsapp-action-cards">
@@ -1537,8 +1725,8 @@
               <h3>Plantão de Vendas 01</h3>
               <div class="phone-number">(22) 99998-1984</div>
               <p>Agendamento de visitas presenciais, simulação de financiamento bancário e envio de documentos.</p>
-              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20especializado%20para%20as%20casas%20do%20Terras%20Alphaville%20Cabo%20Frio." 
-                 class="btn-whatsapp-card" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20especializado%20para%20as%20casas%20do%20Terras%20Alphaville%20Cabo%20Frio."
+                class="btn-whatsapp-card" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 <span>Chamar no WhatsApp</span>
               </a>
@@ -1550,8 +1738,8 @@
               <h3>Plantão de Vendas 02</h3>
               <div class="phone-number">(22) 99998-2084</div>
               <p>Assessoria jurídica, propostas de compra, permuta sob análise e atendimento VIP a compradores.</p>
-              <a href="https://wa.me/5522999982084?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20consultor%20La%20C%C3%B4rte%20sobre%20as%20casas%20no%20Terras%20Alphaville." 
-                 class="btn-whatsapp-card" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5522999982084?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20consultor%20La%20C%C3%B4rte%20sobre%20as%20casas%20no%20Terras%20Alphaville."
+                class="btn-whatsapp-card" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 <span>Chamar no WhatsApp</span>
               </a>
@@ -1562,9 +1750,10 @@
               <div class="whatsapp-card-icon"><i class="fas fa-globe-americas"></i></div>
               <h3>Atendimento USA / Internacional</h3>
               <div class="phone-number">+1 (561) 866-6889</div>
-              <p>Atendimento bilíngue especializado para investidores internacionais e brasileiros residentes nos EUA.</p>
-              <a href="https://wa.me/15618666889?text=Hello!%20I%20am%20interested%20in%20Terras%20Alphaville%20Cabo%20Frio%20properties%20(La%20C%C3%B4rte%20Im%C3%B3veis)." 
-                 class="btn-whatsapp-card" target="_blank" rel="noopener noreferrer">
+              <p>Atendimento bilíngue especializado para investidores internacionais e brasileiros residentes nos EUA.
+              </p>
+              <a href="https://wa.me/15618666889?text=Hello!%20I%20am%20interested%20in%20Terras%20Alphaville%20Cabo%20Frio%20properties%20(La%20C%C3%B4rte%20Im%C3%B3veis)."
+                class="btn-whatsapp-card" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 <span>International WhatsApp</span>
               </a>
@@ -1575,20 +1764,20 @@
           <div class="quick-code-selector">
             <h4>Selecione o imóvel que você mais gostou para enviar mensagem pronta:</h4>
             <div class="code-buttons-row">
-              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Mobiliada%20Terras%20Alphaville%20(C%C3%B3d:%20LCF110525)%20de%20R$%201.550.000.%20Gostaria%20de%20agendar%20uma%20visita." 
-                 class="btn-code-cta" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Mobiliada%20Terras%20Alphaville%20(C%C3%B3d:%20LCF110525)%20de%20R$%201.550.000.%20Gostaria%20de%20agendar%20uma%20visita."
+                class="btn-code-cta" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 <span>Casa Mobiliada (Cód: LCF110525) - R$ 1.550.000</span>
               </a>
 
-              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Mans%C3%A3o%204%20Su%C3%ADtes%20Terras%20Alphaville%20(C%C3%B3d:%20LCF090224)%20de%20R$%202.700.000.%20Gostaria%20de%20agendar%20uma%20visita." 
-                 class="btn-code-cta" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Mans%C3%A3o%204%20Su%C3%ADtes%20Terras%20Alphaville%20(C%C3%B3d:%20LCF090224)%20de%20R$%202.500.000.%20Gostaria%20de%20agendar%20uma%20visita."
+                class="btn-code-cta" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
-                <span>Mansão 350m² (Cód: LCF090224) - R$ 2.700.000</span>
+                <span>Mansão 350m² (Cód: LCF090224) - R$ 2.500.000</span>
               </a>
 
-              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Nova%20Moderna%20Terras%20Alphaville%20(C%C3%B3d:%20LCF101026)%20de%20R$%202.300.000.%20Gostaria%20de%20agendar%20uma%20visita." 
-                 class="btn-code-cta" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Nova%20Moderna%20Terras%20Alphaville%20(C%C3%B3d:%20LCF101026)%20de%20R$%202.300.000.%20Gostaria%20de%20agendar%20uma%20visita."
+                class="btn-code-cta" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i>
                 <span>Casa Nova Cascata (Cód: LCF101026) - R$ 2.300.000</span>
               </a>
@@ -1616,7 +1805,9 @@
               <i class="fas fa-chevron-down faq-icon"></i>
             </button>
             <div class="faq-answer">
-              <p>O condomínio está localizado estrategicamente na Estrada Deodoro de Azevedo (Ogiva), a apenas 2 minutos da entrada de Armação dos Búzios, 5 minutos da Praia do Peró e Ilha do Japonês, e a 10 minutos do Centro de Cabo Frio. É o ponto mais valorizado para quem busca fácil trânsito entre Cabo Frio e Búzios.</p>
+              <p>O condomínio está localizado estrategicamente na Estrada Deodoro de Azevedo (Ogiva), a apenas 2 minutos
+                da entrada de Armação dos Búzios, 5 minutos da Praia do Peró e Ilha do Japonês, e a 10 minutos do Centro
+                de Cabo Frio. É o ponto mais valorizado para quem busca fácil trânsito entre Cabo Frio e Búzios.</p>
             </div>
           </div>
 
@@ -1626,7 +1817,9 @@
               <i class="fas fa-chevron-down faq-icon"></i>
             </button>
             <div class="faq-answer">
-              <p>Sim! Os três imóveis apresentados possuem documentação e habite-se prontos, estando 100% aptos para financiamento imobiliário por qualquer banco (Itaú, Bradesco, Santander, Caixa, Banco do Brasil). A equipe jurídica da La Côrte Imóveis cuida de toda a aprovação de crédito para você.</p>
+              <p>Sim! Os três imóveis apresentados possuem documentação e habite-se prontos, estando 100% aptos para
+                financiamento imobiliário por qualquer banco (Itaú, Bradesco, Santander, Caixa, Banco do Brasil). A
+                equipe jurídica da La Côrte Imóveis cuida de toda a aprovação de crédito para você.</p>
             </div>
           </div>
 
@@ -1636,7 +1829,10 @@
               <i class="fas fa-chevron-down faq-icon"></i>
             </button>
             <div class="faq-answer">
-              <p>A taxa condominial (entre R$ 580 e R$ 700/mês) inclui acesso total a todas as áreas de lazer do clube Alphaville (piscinas, academia com ar-condicionado, quadras de tênis, beach tennis, campo de futebol, saunas, salão de jogos), segurança armada com portaria blindada 24 horas, ronda motorizada contínua, manutenção das alamedas e jardins e iluminação pública interna.</p>
+              <p>A taxa condominial (entre R$ 580 e R$ 700/mês) inclui acesso total a todas as áreas de lazer do clube
+                Alphaville (piscinas, academia com ar-condicionado, quadras de tênis, beach tennis, campo de futebol,
+                saunas, salão de jogos), segurança armada com portaria blindada 24 horas, ronda motorizada contínua,
+                manutenção das alamedas e jardins e iluminação pública interna.</p>
             </div>
           </div>
 
@@ -1646,7 +1842,10 @@
               <i class="fas fa-chevron-down faq-icon"></i>
             </button>
             <div class="faq-answer">
-              <p>O Terras Alphaville Cabo Frio possui um índice muito expressivo de moradores permanentes (famílias, empresários e profissionais que trabalham em regime remoto). Isso garante que o condomínio seja vivo, seguro e acolhedor durante os 12 meses do ano, com escolinhas esportivas para as crianças e convivência saudável, ao contrário de condomínios que parecem desertos no inverno.</p>
+              <p>O Terras Alphaville Cabo Frio possui um índice muito expressivo de moradores permanentes (famílias,
+                empresários e profissionais que trabalham em regime remoto). Isso garante que o condomínio seja vivo,
+                seguro e acolhedor durante os 12 meses do ano, com escolinhas esportivas para as crianças e convivência
+                saudável, ao contrário de condomínios que parecem desertos no inverno.</p>
             </div>
           </div>
 
@@ -1656,7 +1855,9 @@
               <i class="fas fa-chevron-down faq-icon"></i>
             </button>
             <div class="faq-answer">
-              <p>Embora o condomínio seja estritamente residencial para preservar a tranquilidade dos moradores, as maiores redes de supermercados, hortifrutis, padarias artesanais, restaurantes de Búzios e farmácias da região realizam entrega delivery diretamente na porta da sua casa, garantindo conveniência máxima.</p>
+              <p>Embora o condomínio seja estritamente residencial para preservar a tranquilidade dos moradores, as
+                maiores redes de supermercados, hortifrutis, padarias artesanais, restaurantes de Búzios e farmácias da
+                região realizam entrega delivery diretamente na porta da sua casa, garantindo conveniência máxima.</p>
             </div>
           </div>
         </div>
@@ -1672,9 +1873,12 @@
       <div class="footer-top-grid">
         <div class="footer-brand">
           <div class="footer-dual-logos">
-            <img src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpSbjr2aUWTHHmaFp21BN6sPgPVCWJJ9Vhv7cY-d15yTNEqIXeX1lw/logopng.webp" alt="La Côrte Gestão Imobiliária" class="logo-img">
+            <img
+              src="https://s01.jetimgs.com/tnnAwYXphKBPiW3sr35S56TSBu41PCPMXJgG4UpLuMhmB5uKGXsEydyXaxruLCKtnCpSbjr2aUWTHHmaFp21BN6sPgPVCWJJ9Vhv7cY-d15yTNEqIXeX1lw/logopng.webp"
+              alt="La Côrte Gestão Imobiliária" class="logo-img">
             <span class="footer-brand-divider"></span>
-            <img src="assets/alphaville-logo-square.png" alt="Terras Alphaville Cabo Frio" class="footer-alphaville-logo">
+            <img src="assets/alphaville-logo-square.png" alt="Terras Alphaville Cabo Frio"
+              class="footer-alphaville-logo">
           </div>
           <p>
             LaCôrte Gestão Imobiliária LTDA.<br>
@@ -1682,9 +1886,12 @@
             Especialistas em propriedades de alto padrão e condomínios fechados no Terras Alphaville Cabo Frio e Búzios.
           </p>
           <div class="footer-socials">
-            <a href="https://www.instagram.com/lacorteimoveis/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram La Côrte"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/c/LaCôrteImóveis" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube La Côrte"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.facebook.com/lacorteimoveis/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook La Côrte"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/lacorteimoveis/" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="Instagram La Côrte"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/c/LaCôrteImóveis" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="YouTube La Côrte"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/lacorteimoveis/" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="Facebook La Côrte"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
 
@@ -1693,7 +1900,7 @@
           <ul class="footer-links">
             <li><a href="#card-LCF110525">Casa Mobiliada R$ 1.55M (LCF110525)</a></li>
             <li><a href="#card-LCF101026">Casa Nova Cascata R$ 2.30M (LCF101026)</a></li>
-            <li><a href="#card-LCF090224">Mansão 350m² R$ 2.70M (LCF090224)</a></li>
+            <li><a href="#card-LCF090224">Mansão 350m² R$ 2.50M (LCF090224)</a></li>
             <li><a href="#comparativo">Tabela Comparativa</a></li>
           </ul>
         </div>
@@ -1713,7 +1920,8 @@
           <p><i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i> (22) 99998-1984</p>
           <p><i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i> (22) 99998-2084</p>
           <p><i class="fas fa-globe" style="color: var(--blue-ocean);"></i> +1 (561) 866-6889 (EUA)</p>
-          <p><i class="fas fa-map-marker-alt" style="color: var(--gold-primary);"></i> Cabo Frio & Armação dos Búzios, RJ</p>
+          <p><i class="fas fa-map-marker-alt" style="color: var(--gold-primary);"></i> Cabo Frio & Armação dos Búzios,
+            RJ</p>
         </div>
       </div>
 
@@ -1731,27 +1939,28 @@
     <div class="floating-whatsapp-menu" id="floatingWhatsappMenu">
       <h4><i class="fab fa-whatsapp" style="color: var(--whatsapp);"></i> Fale com a La Côrte</h4>
       <p>Escolha o imóvel ou fale direto com um corretor de plantão:</p>
-      
-      <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Mobiliada%20(C%C3%B3d:%20LCF110525)%20-%20R$%201.550.000." 
-         class="floating-menu-item" target="_blank" rel="noopener noreferrer">
+
+      <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Mobiliada%20(C%C3%B3d:%20LCF110525)%20-%20R$%201.550.000."
+        class="floating-menu-item" target="_blank" rel="noopener noreferrer">
         <span>Casa Mobiliada (LCF110525)</span>
         <i class="fas fa-arrow-right"></i>
       </a>
 
-      <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Mans%C3%A3o%20350m%C2%B2%20(C%C3%B3d:%20LCF090224)%20-%20R$%202.700.000." 
-         class="floating-menu-item" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Mans%C3%A3o%20350m%C2%B2%20(C%C3%B3d:%20LCF090224)%20-%20R$%202.500.000."
+        class="floating-menu-item" target="_blank" rel="noopener noreferrer">
         <span>Mansão 350m² (LCF090224)</span>
         <i class="fas fa-arrow-right"></i>
       </a>
 
-      <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Nova%20Cascata%20(C%C3%B3d:%20LCF101026)%20-%20R$%202.300.000." 
-         class="floating-menu-item" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/5522999981984?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Casa%20Nova%20Cascata%20(C%C3%B3d:%20LCF101026)%20-%20R$%202.300.000."
+        class="floating-menu-item" target="_blank" rel="noopener noreferrer">
         <span>Casa Nova Cascata (LCF101026)</span>
         <i class="fas fa-arrow-right"></i>
       </a>
 
-      <a href="https://wa.me/5522999982084?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20consultor%20sobre%20o%20Terras%20Alphaville%20Cabo%20Frio." 
-         class="floating-menu-item" style="background: #ECFDF5; border-color: rgba(37, 211, 102, 0.4);" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/5522999982084?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20consultor%20sobre%20o%20Terras%20Alphaville%20Cabo%20Frio."
+        class="floating-menu-item" style="background: #ECFDF5; border-color: rgba(37, 211, 102, 0.4);" target="_blank"
+        rel="noopener noreferrer">
         <span style="color: var(--emerald); font-weight: 700;">Plantão Geral La Côrte</span>
         <i class="fas fa-comments" style="color: var(--emerald);"></i>
       </a>
@@ -1800,4 +2009,5 @@
   <!-- Script Principal -->
   <script src="script.js"></script>
 </body>
+
 </html>
